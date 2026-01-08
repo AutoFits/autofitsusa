@@ -13,13 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
    PLACE ORDER
 ========================= */
 async function placeOrder(e) {
-  e.preventDefault(); // ⛔ stop form reload
+  e.preventDefault();
 
-  const name = document.getElementById("name")?.value.trim();
-  const email = document.getElementById("email")?.value.trim();
-  const address = document.getElementById("address")?.value.trim();
+  const firstName = document.getElementById("firstName")?.value.trim();
+  const lastName  = document.getElementById("lastName")?.value.trim();
+  const email     = document.getElementById("email")?.value.trim();
+  const address   = document.getElementById("address")?.value.trim();
 
-  if (!name || !address) {
+  const name = `${firstName} ${lastName}`.trim();
+
+  if (!firstName || !lastName || !address) {
     alert("Please fill in all required fields.");
     return;
   }
@@ -45,8 +48,8 @@ async function placeOrder(e) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          totalAmount: total,
           orderId,
+          totalAmount: total,
           customer_name: name,
           customer_email: email,
           customer_address: address
@@ -57,17 +60,18 @@ async function placeOrder(e) {
     const data = await response.json();
 
     if (data.url) {
-      // ✅ redirect to Stripe
-      window.location.href = data.url;
+      window.location.href = data.url; // 🚀 Stripe redirect
     } else {
       console.error(data);
       alert("Payment initialization failed.");
     }
+
   } catch (err) {
     console.error("Checkout error:", err);
     alert("Something went wrong. Please try again.");
   }
 }
+
 
 /* =========================
    EMAIL (OPTIONAL – KEEP)
