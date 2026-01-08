@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0b0f19, #111827);
+  color: #111827;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #0b0f19;
+  padding: 16px 20px;
+}
+
+.logo {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #ef4444;
+}
+
+/* WRAPPER */
+.success-wrapper {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* CARD */
+.success-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 40px 30px;
+  max-width: 460px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+}
+
+/* ICON */
+.success-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: #22c55e;
+  color: white;
+  border-radius: 50%;
+  font-size: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TEXT */
+.success-card h1 {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.success-msg {
+  font-size: 15px;
+  color: #374151;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+/* ORDER BOX */
+.order-box {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 28px;
+}
+
+.order-box span {
+  display: block;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.order-box strong {
+  font-size: 14px;
+  word-break: break-all;
+}
+
+/* ACTIONS */
+.success-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.success-actions button {
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  transition: background 0.2s ease;
+}
+
+.success-actions button:hover {
+  background: #1e40af;
+}
+
+.success-actions .secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.success-actions .secondary:hover {
+  background: #d1d5db;
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .success-card {
+    padding: 30px 20px;
+  }
+
+  .success-card h1 {
+    font-size: 22px;
+  }
+
+  .success-msg {
+    font-size: 14px;
+  }
+}
+
