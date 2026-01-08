@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Support | AutoFits USA</title>
+  <link rel="stylesheet" href="css/support.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-left">
+    <a href="index.html" class="logo">AutoFits<span>USA</span></a>
+  </div>
+
+  <div class="nav-right">
+    <div class="cart-icon" onclick="goToCart()">
+      🛒 <span id="cartCount">0</span>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop Parts</a>
+    <a href="how.html">How It Works</a>
+    <a href="support.html">Support</a>
+  </nav>
+</header>
+
+<main class="support-container">
+
+  <h1>Customer Support</h1>
+  <p class="subtitle">
+    We’re here to help you every step of the way.
+  </p>
+
+  <!-- SUPPORT OPTIONS -->
+  <div class="support-grid">
+
+    <div class="support-card">
+      <h3>📧 Email Support</h3>
+      <p>Reach us anytime</p>
+      <strong>support@autofitsusa.com</strong>
+    </div>
+
+    <div class="support-card">
+      <h3>📦 Order & Shipping</h3>
+      <p>Track orders, delivery & returns</p>
+    </div>
+
+    <div class="support-card">
+      <h3>🛠 Part Compatibility</h3>
+      <p>Need help choosing the right part?</p>
+    </div>
+
+    <div class="support-card">
+      <h3>🔄 Returns & Refunds</h3>
+      <p>Easy & transparent return process</p>
+    </div>
+
+  </div>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h4 onclick="toggleFAQ(this)">Do you guarantee fit?</h4>
+      <p>Yes. All parts are OEM compatible and verified for fitment.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4 onclick="toggleFAQ(this)">Do you ship across the USA?</h4>
+      <p>Yes, we ship across the USA and North America.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4 onclick="toggleFAQ(this)">What if the part doesn’t fit?</h4>
+      <p>You can return it easily as per our return policy.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- CHAT BUTTON -->
+<button class="chat-btn" onclick="toggleChat()">💬</button>
+
+<!-- CHAT BOX -->
+<div class="chat-box hidden" id="chatBox">
+  <div class="chat-header">
+    <span>AutoFits Support</span>
+    <button onclick="toggleChat()">✕</button>
+  </div>
+
+  <div class="chat-messages" id="chatMessages">
+    <div class="bot-msg">
+      Hi 👋 How can we help you today?
+    </div>
+  </div>
+
+  <div class="chat-input">
+    <input type="text" id="chatInput" placeholder="Type your message..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+
+    <div>
+      <h4>Customer Service</h4>
+      <a href="contact.html">Contact Us</a>
+      <a href="faq.html">FAQ</a>
+      <a href="track-order.html">Track Order</a>
+    </div>
+
+    <div>
+      <h4>Information</h4>
+      <a href="about.html">About Us</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="returns.html">Returns & Refunds</a>
+    </div>
+
+
+  </div>
+
+  <p class="copyright">
+    © 2026 AutoFits USA. All rights reserved.
+  </p>
+</footer>
+
+<script src="js/support.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

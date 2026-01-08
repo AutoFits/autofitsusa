@@ -1,0 +1,387 @@
+
+.search-hero {
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+}
+
+.search-hero h1 {
+  margin-bottom: 15px;
+}
+
+.search-hero input {
+  width: 100%;
+  max-width: 600px;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 16px;
+}
+.search-box {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#searchResults {
+  margin-top: 10px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+
+.search-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.search-item:hover {
+  background: #f1f5f9;
+}
+
+.search-item img {
+  width: 60px;
+  height: 48px;
+  object-fit: contain;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.search-item strong {
+  display: block;
+  font-size: 16px;
+}
+
+.search-item span {
+  font-size: 12px;
+  color: #6b7280;
+}
+@media (max-width: 768px) {
+  .search-item {
+    padding: 16px;
+  }
+
+  .search-item img {
+    width: 68px;
+    height: 68px;
+  }
+
+  .search-item strong {
+    font-size: 17px;
+  }
+}
+.search-item + .search-item {
+  border-top: 1px solid #e5e7eb;
+}
+
+
+/* BRANDS */
+.brands-section {
+  padding: 30px 20px;
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 15px;
+}
+
+.brand-card {
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.brand-card img {
+  max-width: 60px;
+}
+.brand-card {
+  background: white;
+  padding: 14px 10px;
+  border-radius: 14px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.brand-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.brand-card img {
+  max-width: 56px;
+  height: auto;
+}
+
+.brand-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111827;
+}
+.brand-card:active {
+  transform: scale(0.97);
+}
+
+
+
+
+/* TRUST */
+
+.trust-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 30px 20px;
+}
+
+.trust-card {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* FOOTER */
+.footer {
+  background: #0b0f19;
+  color: #cbd5e1;
+  padding: 30px 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+}
+
+.footer a {
+  display: block;
+  color: #cbd5e1;
+  text-decoration: none;
+  margin: 6px 0;
+}
+
+.search-item {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+}
+
+.search-item img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.search-text strong {
+  display: block;
+  font-size: 14px;
+}
+
+.search-text span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.search-item:hover {
+  background: #f1f5f9;
+}
+
+.hero {
+  background-image: url("images/hero-bg.jpg"); /* your image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 280px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* dark overlay */
+  backdrop-filter: blur(2px);
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding: 60px 20px;
+}
+
+.hero-overlay h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero-overlay p {
+  opacity: 0.9;
+}
+.brand-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* =========================
+   SEARCH HERO BACKGROUND
+   ========================= */
+
+.search-hero {
+  position: relative;
+  padding: 70px 20px 90px;
+  text-align: center;
+  
+}
+
+/* Background image layer */
+.search-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url("/images/herobg\ image.jpg"); /* 🔴 CHANGE PATH IF NEEDED */
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px);
+  transform: scale(1.05);
+  z-index: 0;
+}
+
+/* Foreground content */
+.search-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Heading */
+.search-hero h1 {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Search box */
+.search-box {
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* Results dropdown */
+.search-results {
+  background: white;
+  margin-top: 10px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .search-hero {
+    padding: 50px 16px 70px;
+  }
+
+  .search-hero h1 {
+    font-size: 26px;
+  }
+}
+
+/* =========================
+   HOME SECTION HEADINGS
+   ========================= */
+
+.section-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.3;
+
+  /* 👇 THIS fixes alignment & spacing */
+  margin: 40px 0 24px;   /* same spacing everywhere */
+  padding-left: 16px;    /* consistent left offset */
+}
+
+/* Ensure sections below don't creep up */
+.brand-grid,
+.why-order {
+  margin-top: 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 20px;
+    margin: 36px 0 22px;
+    padding-left: 14px;
+  }
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+
+  background: #ffffff;
+  border-radius: 12px;
+  margin-top: 8px;
+
+  max-height: 300px;
+  overflow-y: auto;
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  z-index: 9999; /* 🔥 THIS fixes it */
+}
+.search-hero::before {
+  z-index: 0;
+}
+.search-item {
+  padding: 12px 14px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.search-item:hover {
+  background: #f1f5f9;
+}

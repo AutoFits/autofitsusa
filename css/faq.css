@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f7fa;
+  color: #1f2937;
+}
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: #0b0f19;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #ef4444;
+}
+
+.nav-right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background: #0b0f19;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+}
+
+.nav-links a {
+  color: white;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.nav-links.show {
+  display: flex;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.faq-container h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 16px;
+  text-align: left;
+  font-size: 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.faq-answer {
+  padding: 0 16px 16px;
+  display: none;
+  font-size: 14px;
+  color: #374151;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #6b7280;
+}

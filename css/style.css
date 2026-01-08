@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+body {
+  background: #f5f7fa;
+  color: #111827;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: #0b0f19;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #ef4444;
+}
+
+.logo .usa {
+  font-weight: 800;
+  margin-left: 4px;
+
+  /* 🇺🇸 Flag-inspired gradient */
+  background: linear-gradient(
+    90deg,
+    #b22234 0%,
+    #b22234 33%,
+    #ffffff 33%,
+    #ffffff 66%,
+    #3c3b6e 66%,
+    #3c3b6e 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;}
+
+.nav-right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.cart-icon {
+  cursor: pointer;
+  position: relative;
+  font-size: 20px;
+}
+
+.cart-icon span {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: #ef4444;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background: #0b0f19;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+}
+
+.nav-links a {
+  color: white;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.nav-links.show {
+  display: flex;
+}

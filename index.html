@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoFits USA | Find Auto Parts That Fit</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-left">
+    <a href="index.html" class="logo">AutoFits<span>USA</span></a>
+  </div>
+
+  <div class="nav-right">
+    <div class="cart-icon" onclick="goToCart()">
+      🛒 <span id="cartCount">0</span>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop Parts</a>
+    <a href="how.html">How It Works</a>
+    <a href="support.html">Support</a>
+  </nav>
+</header>
+
+<section class="search-hero">
+  <div class="hero-content">
+    <h1>Find Your Perfect Parts</h1>
+  </div>
+
+  <div class="search-box">
+    <input
+      type="text"
+      id="mainSearch"
+      placeholder="Search by part name, vehicle, or part number..."
+      oninput="handleLiveSearch()"
+    />
+
+    <div id="searchResults" class="search-results"></div>
+  </div>
+</section>
+
+
+<!-- SHOP BY BRAND -->
+<section class="brands-section">
+  <h2 class="section-title">Shop Parts by Brand</h2>
+
+  <div class="brand-grid">
+    <div class="brand-card" onclick="goToBrand('Acura')">
+      <img src="images/brands/acura.png" alt="Acura">
+      <span class="brand-name">Acura</span>
+    </div>
+    <div class="brand-card" onclick="goToBrand('Honda')">
+      <img src="images/brands/honda2.gif" alt="Honda">
+      <span class="brand-name">Honda</span>
+    </div>
+    <div class="brand-card" onclick="goToBrand('Toyota')">
+      <img src="images/brands/toyota.png" alt="Toyota">
+      <span class="brand-name">Toyota</span>
+    </div>
+    <div class="brand-card" onclick="goToBrand('Dodge')">
+      <img src="images/brands/dodge (2).png" alt="Dodge">
+      <span class="brand-name">Dodge</span>
+    </div>
+    <div class="brand-card" onclick="goToBrand('Ford')">
+      <img src="images/brands/ford.png" alt="Ford">
+      <span class="brand-name">Ford</span>
+    </div>
+    <div class="brand-card" onclick="goToBrand('BMW')">
+      <img src="images/brands/bmw.png" alt="BMW">
+      <span class="brand-name">BMW</span>
+    </div>
+    <div class="brand-card" onclick="goToBrand('Mercedes')">
+      <img src="images/brands/mercedes.png" alt="Mercedes">
+      <span class="brand-name">Mercedes</span>
+    </div>
+    <div class="brand-card" onclick="goToBrand('Nissan')">
+      <img src="images/brands/nissan.png" alt="Nissan">
+      <span class="brand-name">Nissan</span>
+    </div>
+    <div class="brand-card" onclick="goToBrand('Volkswagen')">
+      <img src="images/brands/volkswagen.png" alt="Volswagen">
+      <span class="brand-name">Volkswagen</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+
+    <div>
+      <h4>Customer Service</h4>
+      <a href="contact.html">Contact Us</a>
+      <a href="faq.html">FAQ</a>
+      <a href="track-order.html">Track Order</a>
+    </div>
+
+    <div>
+      <h4>Information</h4>
+      <a href="about.html">About Us</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="returns.html">Returns & Refunds</a>
+    </div>
+
+ 
+
+  </div>
+
+  <p class="copyright">
+    © 2026 AutoFits USA. All rights reserved.
+  </p>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/home.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

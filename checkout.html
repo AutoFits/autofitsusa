@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout | AutoFits USA</title>
+  <link rel="stylesheet" href="css/checkout.css" />
+</head>
+<body>
+
+<header class="checkout-header">
+  <h1>Checkout</h1>
+   <button class="back-btn" onclick="goBack()">←</button>
+</header>
+
+<main class="checkout-container">
+
+  <!-- ADDRESS FORM -->
+  <section class="checkout-card">
+    <h2>Shipping Address</h2>
+
+    <form id="checkoutForm">
+      <div class="row">
+        <input type="text" id="firstName" placeholder="First Name" required />
+        <input type="text" id="lastName" placeholder="Last Name" required />
+      </div>
+
+      <input type="email" id="email" placeholder="Email Address" required />
+      <input type="tel" id="phone" placeholder="Phone Number" required />
+
+      <input type="text" id="address" placeholder="Street Address" required />
+      <input type="text" id="address2" placeholder="Apartment, Suite (optional)" />
+
+      <div class="row">
+        <input type="text" id="city" placeholder="City" required />
+        <input type="text" id="state" placeholder="State" required />
+      </div>
+
+      <div class="row">
+        <input type="text" id="zip" placeholder="ZIP Code" required />
+        <input type="text" id="country" placeholder="Country" value="USA" required />
+      </div>
+
+     <button class="place-order-btn">Place Order</button>
+
+
+    </form>
+  </section>
+
+
+
+<div class="summary-row total">
+  <span>Total Payable</span>
+  <span id="total">$0.00</span>
+</div>
+
+
+
+</main>
+
+<!-- CONFIRMATION -->
+<div id="confirmationBox" class="confirmation hidden">
+  <h2>✅ Order Confirmed</h2>
+  <p>Your order has been placed successfully.</p>
+  <p><strong>Order ID:</strong> <span id="confirmOrderId"></span></p>
+</div>
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/checkout.js"></script>
+
+</body>
+</html>

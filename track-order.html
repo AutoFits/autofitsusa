@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Track Your Order | AutoFits USA</title>
+  <meta name="description" content="Track your AutoFits USA order in real time using your order ID and email." />
+
+  <link rel="stylesheet" href="css/track-order.css" />
+</head>
+<body>
+
+  <!-- NAVBAR (reuse your existing navbar CSS if you want) -->
+  <header class="navbar">
+  <a href="index.html" class="logo">AutoFits<span>USA</span></a>
+
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop Parts</a>
+    <a href="how.html">How It Works</a>
+    <a href="support.html">Support</a>
+  </nav>
+</header>
+
+<main class="track-container">
+
+  <h1>Track Your Order</h1>
+  <p class="subtitle">
+    Enter your Order ID and email to view real-time tracking updates.
+  </p>
+
+  <div class="track-form">
+    <input type="text" id="orderId" placeholder="Order ID (e.g. AFU123456)" />
+    <input type="email" id="email" placeholder="Email used during checkout" />
+    <button onclick="trackOrder()">Track Order</button>
+  </div>
+
+  <div id="trackingResult" class="tracking-result hidden">
+
+    <h2>Order Status</h2>
+
+    <div class="status-line">
+      <div class="step active">Order Confirmed</div>
+      <div class="step active">Processing</div>
+      <div class="step">Shipped</div>
+      <div class="step">Out for Delivery</div>
+      <div class="step">Delivered</div>
+    </div>
+
+    <div class="tracking-details">
+      <p><strong>Carrier:</strong> USPS</p>
+      <p><strong>Tracking Number:</strong> <span id="trackingNumber">—</span></p>
+      <p><strong>Estimated Delivery:</strong> <span id="deliveryDate">—</span></p>
+    </div>
+
+    <div class="note">
+      Live carrier tracking will be enabled once your order is shipped.
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 AutoFits USA. All rights reserved.</p>
+</footer>
+
+<script src="js/track-order.js"></script>
+</body>
+</html>

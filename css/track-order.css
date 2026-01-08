@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fa;
+  color: #1f2937;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: #0b0f19;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #ef4444;
+}
+
+.nav-right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background: #0b0f19;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+}
+
+.nav-links a {
+  color: white;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.nav-links.show {
+  display: flex;
+}
+
+
+/* MAIN */
+.track-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.track-container h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+/* FORM */
+.track-form {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  display: grid;
+  gap: 12px;
+}
+
+.track-form input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+}
+
+.track-form button {
+  padding: 14px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* RESULT */
+.tracking-result {
+  margin-top: 40px;
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+/* STATUS LINE */
+.status-line {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  gap: 10px;
+}
+
+.step {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  background: #e5e7eb;
+  font-size: 13px;
+}
+
+.step.active {
+  background: #22c55e;
+  color: white;
+  font-weight: 600;
+}
+
+/* DETAILS */
+.tracking-details p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.note {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .status-line {
+    flex-direction: column;
+  }
+}

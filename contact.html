@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | AutoFits USA</title>
+
+  <meta name="description" content="Contact AutoFits USA for support, order help, part compatibility, or general inquiries." />
+
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+
+  <!-- NAVBAR (reuse your existing navbar CSS if you want) -->
+  <header class="navbar">
+  <a href="index.html" class="logo">AutoFits<span>USA</span></a>
+
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop Parts</a>
+    <a href="how.html">How It Works</a>
+    <a href="support.html">Support</a>
+  </nav>
+</header>
+
+<main class="contact-container">
+
+  <section class="contact-info">
+    <h1>Contact Us</h1>
+    <p>We’re here to help with orders, compatibility, shipping, or general questions.</p>
+
+    <div class="info-card">
+      <strong>Email</strong>
+      <span>support@autofitsusa.com</span>
+    </div>
+
+    <div class="info-card">
+      <strong>Phone</strong>
+      <span>+1 (XXX) XXX-XXXX</span>
+    </div>
+
+    <div class="info-card">
+      <strong>WhatsApp</strong>
+      <button onclick="openWhatsApp()">Chat on WhatsApp</button>
+    </div>
+  </section>
+
+  <section class="contact-form">
+    <h2>Send Us a Message</h2>
+
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <input type="text" placeholder="Order Number (optional)" />
+      <textarea placeholder="How can we help you?" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p id="formStatus"></p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 AutoFits USA. All rights reserved.</p>
+</footer>
+
+<script src="js/contact.js"></script>
+</body>
+</html>
