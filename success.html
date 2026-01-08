@@ -2,41 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Payment Successful | AutoFitsUSA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Payment Successful | AutoFits USA</title>
+
   <link rel="stylesheet" href="css/success.css" />
 </head>
 <body>
 
-  <main class="success-container">
+  <!-- NAVBAR (optional but recommended for consistency) -->
+  <div class="navbar">
+    <a href="index.html" class="logo">
+      AutoFits<span>USA</span>
+    </a>
+  </div>
+
+  <!-- SUCCESS CARD -->
+  <main class="success-wrapper">
     <div class="success-card">
 
-      <div class="checkmark">✓</div>
+      <div class="success-icon">✓</div>
 
       <h1>Payment Successful</h1>
 
-      <p class="message">
+      <p class="success-msg">
         Thank you for your order!  
-        Your payment was processed successfully.
+        Sit back & relax — your order will be processed and shipped soon.
       </p>
 
       <div class="order-box">
-        <p><strong>Order ID</strong></p>
-        <p id="orderId">AFU-XXXXXX</p>
+        <span>Order ID</span>
+        <strong id="orderId">Loading...</strong>
       </div>
 
-      <p class="subtext">
-        Sit back & relax — your order will be packed and shipped soon 🚚
-      </p>
-
-      <div class="actions">
-        <a href="shop.html" class="btn primary">Continue Shopping</a>
-        <a href="index.html" class="btn secondary">Go to Home</a>
+      <div class="success-actions">
+        <button onclick="continueShopping()">Continue Shopping</button>
+        <button class="secondary" onclick="goHome()">Go to Home</button>
       </div>
 
     </div>
   </main>
 
+  <script src="js/success.js"></script>
 </body>
 </html>
+
 

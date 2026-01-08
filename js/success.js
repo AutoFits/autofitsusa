@@ -1,28 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search);
-  const sessionId = params.get("session_id");
+  console.log("✅ SUCCESS PAGE LOADED — CLEARING CART");
 
-  const orderIdEl = document.getElementById("orderId");
-  if (orderIdEl) {
-    orderIdEl.textContent = sessionId || "Unavailable";
-  }
-
-  /* =========================
-     🔥 CLEAR CART AFTER PAYMENT
-     ========================= */
-
+  // Clear cart completely
   localStorage.removeItem("cart");
   localStorage.removeItem("cartTotal");
 
-  /* Update cart badge immediately */
+  // Force navbar cart badge to zero
   const badge = document.getElementById("cartCount");
   if (badge) badge.textContent = "0";
 });
 
-/* =========================
-   BUTTON ACTIONS
-   ========================= */
-
+/* Buttons */
 function goHome() {
   window.location.href = "index.html";
 }
@@ -30,4 +18,5 @@ function goHome() {
 function continueShopping() {
   window.location.href = "shop.html";
 }
+
 
