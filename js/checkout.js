@@ -108,3 +108,9 @@ function sendOrderEmail(orderData) {
     console.error("Email error:", err);
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .getElementById("placeOrderBtn")
+    .addEventListener("click", placeOrder);
+});
