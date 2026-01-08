@@ -17,12 +17,17 @@ document.addEventListener("DOMContentLoaded", () => {
    PLACE ORDER
    ========================= */
 
-async function placeOrder() {
-  const name = document.getElementById("name")?.value.trim();
+function placeOrder() {
+  // ✅ Generate order ID FIRST
+  const orderId = "AFU-" + Date.now();
+
+  // ✅ Get values safely
+  const firstName = document.getElementById("firstName")?.value.trim();
+  const lastName = document.getElementById("lastName")?.value.trim();
   const email = document.getElementById("email")?.value.trim();
   const address = document.getElementById("address")?.value.trim();
 
-  if (!name || !address) {
+  if (!firstName || !lastName || !address) {
     alert("Please fill in all required fields.");
     return;
   }
@@ -33,54 +38,33 @@ async function placeOrder() {
     return;
   }
 
-  const total = parseFloat(localStorage.getItem("cartTotal") || "0");
+  const total = localStorage.getItem("cartTotal") || "0.00";
 
-  if (total <= 0) {
-    alert("Invalid order total.");
-    return;
-  }
+  // ✅ Build items text
+  let orderItems = "";
+  cart.forEach(item => {
+    orderItems += `${item.name} (Qty: ${item.qty})\n`;
+  });
 
-  try {
-    const response = await fetch(
-      "/.netlify/functions/create-checkout-session",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          totalAmount: total,
-          customer_name: name,
-          customer_email: email,
-          customer_address: address
-        })
-      }
-    );
-
-    const data = await response.json();
-
-    if (data.url) {
-      // 🔥 Redirect to Stripe Checkout
-      window.location.href = data.url;
-    } else {
-      alert("Payment initialization failed. Please try again.");
-      console.error(data);
-    }
-
-  } catch (err) {
-    console.error("Checkout error:", err);
-    alert("Something went wrong. Please try again.");
-  }
-}
-
-
-  // Send email
+  // ✅ Send email (orderId exists here)
   sendOrderEmail({
     order_id: orderId,
-    customer_name: name,
+    customer_name: `${firstName} ${lastName}`,
     customer_email: email || "Not provided",
     customer_address: address,
     items: orderItems,
     total: `$${total}`
   });
+
+  // ✅ Stripe redirect (next step)
+  startStripeCheckout(orderId, total);
+
+  console.log("Order placed:", orderId);
+}
+
+
+
+
 
   // Cleanup
   localStorage.removeItem("cart");
