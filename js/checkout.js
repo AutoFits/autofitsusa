@@ -1,33 +1,25 @@
+/* =========================
+   SHOW TOTAL
+========================= */
 document.addEventListener("DOMContentLoaded", () => {
   const totalEl = document.getElementById("total");
-
   if (!totalEl) return;
 
   const storedTotal = localStorage.getItem("cartTotal");
-
-  if (!storedTotal) {
-    totalEl.textContent = "$0.00";
-    return;
-  }
-
-  totalEl.textContent = `$${storedTotal}`;
+  totalEl.textContent = storedTotal ? `$${storedTotal}` : "$0.00";
 });
 
 /* =========================
    PLACE ORDER
-   ========================= */
+========================= */
+async function placeOrder(e) {
+  e.preventDefault(); // ⛔ stop form reload
 
-function placeOrder() {
-  // ✅ Generate order ID FIRST
-  const orderId = "AFU-" + Date.now();
-
-  // ✅ Get values safely
-  const firstName = document.getElementById("firstName")?.value.trim();
-  const lastName = document.getElementById("lastName")?.value.trim();
+  const name = document.getElementById("name")?.value.trim();
   const email = document.getElementById("email")?.value.trim();
   const address = document.getElementById("address")?.value.trim();
 
-  if (!firstName || !lastName || !address) {
+  if (!name || !address) {
     alert("Please fill in all required fields.");
     return;
   }
@@ -38,63 +30,59 @@ function placeOrder() {
     return;
   }
 
-  const total = localStorage.getItem("cartTotal") || "0.00";
+  const total = parseFloat(localStorage.getItem("cartTotal") || "0");
+  if (total <= 0) {
+    alert("Invalid order total.");
+    return;
+  }
 
-  // ✅ Build items text
-  let orderItems = "";
-  cart.forEach(item => {
-    orderItems += `${item.name} (Qty: ${item.qty})\n`;
-  });
+  const orderId = "AFU-" + Date.now();
 
-  // ✅ Send email (orderId exists here)
-  sendOrderEmail({
-    order_id: orderId,
-    customer_name: `${firstName} ${lastName}`,
-    customer_email: email || "Not provided",
-    customer_address: address,
-    items: orderItems,
-    total: `$${total}`
-  });
+  try {
+    const response = await fetch(
+      "/.netlify/functions/create-checkout-session",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          totalAmount: total,
+          orderId,
+          customer_name: name,
+          customer_email: email,
+          customer_address: address
+        })
+      }
+    );
 
-  // ✅ Stripe redirect (next step)
-  startStripeCheckout(orderId, total);
+    const data = await response.json();
 
-  console.log("Order placed:", orderId);
+    if (data.url) {
+      // ✅ redirect to Stripe
+      window.location.href = data.url;
+    } else {
+      console.error(data);
+      alert("Payment initialization failed.");
+    }
+  } catch (err) {
+    console.error("Checkout error:", err);
+    alert("Something went wrong. Please try again.");
+  }
 }
-
-
-
-
-
-  // Cleanup
-  localStorage.removeItem("cart");
-  localStorage.removeItem("cartTotal");
-
-  alert(
-    `✅ Order Confirmed!\n\nOrder ID: ${orderId}\n\nSit back & relax — your order will be processed soon.`
-  );
-
-  window.location.href = "index.html";
-
 
 /* =========================
-   EMAIL
-   ========================= */
-
+   EMAIL (OPTIONAL – KEEP)
+========================= */
 function sendOrderEmail(orderData) {
-  emailjs.send(
-    "service_7smhfj3",
-    "template_ldvnhyj",
-    orderData
-  ).then(() => {
-    console.log("Order email sent");
-  }).catch(err => {
-    console.error("Email error:", err);
-  });
+  emailjs
+    .send("service_7smhfj3", "template_ldvnhyj", orderData)
+    .then(() => console.log("Order email sent"))
+    .catch(err => console.error("Email error:", err));
 }
 
+/* =========================
+   BUTTON BINDING
+========================= */
 document.addEventListener("DOMContentLoaded", () => {
-  document
-    .getElementById("placeOrderBtn")
-    .addEventListener("click", placeOrder);
+  const btn = document.getElementById("placeOrderBtn");
+  if (btn) btn.addEventListener("click", placeOrder);
 });
