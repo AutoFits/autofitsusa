@@ -3,12 +3,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const sessionId = params.get("session_id");
 
   const orderIdEl = document.getElementById("orderId");
-
-  if (sessionId && orderIdEl) {
-    orderIdEl.textContent = sessionId;
-  } else if (orderIdEl) {
-    orderIdEl.textContent = "Unavailable";
+  if (orderIdEl) {
+    orderIdEl.textContent = sessionId || "Unavailable";
   }
+
+  /* =========================
+     🔥 CLEAR CART AFTER PAYMENT
+     ========================= */
+
+  localStorage.removeItem("cart");
+  localStorage.removeItem("cartTotal");
+
+  /* Update cart badge immediately */
+  const badge = document.getElementById("cartCount");
+  if (badge) badge.textContent = "0";
 });
 
 /* =========================
@@ -22,3 +30,4 @@ function goHome() {
 function continueShopping() {
   window.location.href = "shop.html";
 }
+
