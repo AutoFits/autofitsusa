@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
    PLACE ORDER
    ========================= */
 
-function placeOrder() {
+async function placeOrder() {
   const name = document.getElementById("name")?.value.trim();
   const email = document.getElementById("email")?.value.trim();
   const address = document.getElementById("address")?.value.trim();
@@ -33,17 +33,44 @@ function placeOrder() {
     return;
   }
 
-  const orderId = "AFU-" + Date.now();
-  const total = localStorage.getItem("cartTotal") || "0.00";
+  const total = parseFloat(localStorage.getItem("cartTotal") || "0");
 
-  let orderItems = "";
+  if (total <= 0) {
+    alert("Invalid order total.");
+    return;
+  }
 
-  cart.forEach(item => {
-    const product = PRODUCTS.find(p => p.id === item.id);
-    if (!product) return;
+  try {
+    const response = await fetch(
+      "/.netlify/functions/create-checkout-session",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          totalAmount: total,
+          customer_name: name,
+          customer_email: email,
+          customer_address: address
+        })
+      }
+    );
 
-    orderItems += `${product.name} (Qty: ${item.qty})\n`;
-  });
+    const data = await response.json();
+
+    if (data.url) {
+      // 🔥 Redirect to Stripe Checkout
+      window.location.href = data.url;
+    } else {
+      alert("Payment initialization failed. Please try again.");
+      console.error(data);
+    }
+
+  } catch (err) {
+    console.error("Checkout error:", err);
+    alert("Something went wrong. Please try again.");
+  }
+}
+
 
   // Send email
   sendOrderEmail({
@@ -64,7 +91,7 @@ function placeOrder() {
   );
 
   window.location.href = "index.html";
-}
+
 
 /* =========================
    EMAIL
