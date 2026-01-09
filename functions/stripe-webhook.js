@@ -22,9 +22,18 @@ exports.handler = async (event) => {
   if (stripeEvent.type === "checkout.session.completed") {
     const session = stripeEvent.data.object;
 
-    const customerEmail = session.customer_details.email;
-    const address = session.customer_details.address;
-    const amount = session.amount_total / 100;
+    const customerName = session.customer_details?.name || "Not provided";
+    const customerEmail = session.customer_details?.email || "Not provided";
+
+    const addr = session.customer_details?.address;
+
+    const fullAddress = addr
+      ? `${addr.line1 || ""}${addr.line2 ? ", " + addr.line2 : ""}
+${addr.city || ""}, ${addr.state || ""} ${addr.postal_code || ""}
+${addr.country || ""}`
+      : "Address not provided";
+
+    const amount = (session.amount_total / 100).toFixed(2);
     const orderId = session.id;
 
     // -------- SEND EMAIL --------
@@ -44,12 +53,11 @@ exports.handler = async (event) => {
 New Order Received
 
 Order ID: ${orderId}
+Customer Name: ${customerName}
 Customer Email: ${customerEmail}
 
 Shipping Address:
-${address.line1}
-${address.city}, ${address.state} ${address.postal_code}
-${address.country}
+${fullAddress}
 
 Amount Paid: $${amount}
 
