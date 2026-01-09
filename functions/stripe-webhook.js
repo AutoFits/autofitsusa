@@ -1,5 +1,7 @@
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+const Stripe = require("stripe");
 const nodemailer = require("nodemailer");
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 exports.handler = async (event) => {
   const sig = event.headers["stripe-signature"];
@@ -22,21 +24,42 @@ exports.handler = async (event) => {
   if (stripeEvent.type === "checkout.session.completed") {
     const session = stripeEvent.data.object;
 
-    const customerName = session.customer_details?.name || "Not provided";
-    const customerEmail = session.customer_details?.email || "Not provided";
+    /* =====================
+       CUSTOMER DETAILS
+    ====================== */
+    const customerName =
+      session.customer_details?.name || "Not provided";
+    const customerEmail =
+      session.customer_details?.email || "Not provided";
 
     const addr = session.customer_details?.address;
 
     const fullAddress = addr
-      ? `${addr.line1 || ""}${addr.line2 ? ", " + addr.line2 : ""}
-${addr.city || ""}, ${addr.state || ""} ${addr.postal_code || ""}
+      ? `${addr.line1 || ""}
+${addr.line2 ? addr.line2 + "\n" : ""}${addr.city || ""}, ${addr.state || ""} ${addr.postal_code || ""}
 ${addr.country || ""}`
       : "Address not provided";
 
     const amount = (session.amount_total / 100).toFixed(2);
     const orderId = session.id;
 
-    // -------- SEND EMAIL --------
+    /* =====================
+       FETCH LINE ITEMS
+    ====================== */
+    const lineItems = await stripe.checkout.sessions.listLineItems(
+      session.id,
+      { limit: 100 }
+    );
+
+    let itemsText = "";
+
+    lineItems.data.forEach((item, index) => {
+      itemsText += `${index + 1}. ${item.description} — Qty: ${item.quantity}\n`;
+    });
+
+    /* =====================
+       SEND EMAIL
+    ====================== */
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -50,16 +73,25 @@ ${addr.country || ""}`
       to: process.env.ORDER_EMAIL,
       subject: `🧾 New Order Received – ${orderId}`,
       text: `
-New Order Received
+NEW ORDER RECEIVED
 
-Order ID: ${orderId}
-Customer Name: ${customerName}
-Customer Email: ${customerEmail}
+Order ID:
+${orderId}
+
+Customer Name:
+${customerName}
+
+Customer Email:
+${customerEmail}
 
 Shipping Address:
 ${fullAddress}
 
-Amount Paid: $${amount}
+Items Ordered:
+${itemsText}
+
+Amount Paid:
+$${amount}
 
 Please process this order.
       `,

@@ -16,13 +16,6 @@ exports.handler = async (event) => {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       mode: "payment",
-
-      // ✅ Collect customer info
-      billing_address_collection: "required",
-      shipping_address_collection: {
-        allowed_countries: ["US"],
-      },
-
       line_items: [
         {
           price_data: {
@@ -35,9 +28,9 @@ exports.handler = async (event) => {
           quantity: 1,
         },
       ],
-
       success_url: `${process.env.SITE_URL}/success.html`,
       cancel_url: `${process.env.SITE_URL}/checkout.html`,
+      
     });
 
     return {
@@ -52,3 +45,4 @@ exports.handler = async (event) => {
     };
   }
 };
+
