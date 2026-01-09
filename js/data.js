@@ -1056,84 +1056,6 @@ const PRODUCTS = [
     }
   },
 
-      { id: "honda_accord_driver_knee airbag_2018_2021",
-
-    /* ===== BASIC INFO ===== */
-    name: "2018-2021 Honda Accord Right Side Passenger Side Knee Air Bag OEM",
-    brand: "Honda",
-    category: "knee airbags",
-
-    /* ===== PRICING ===== */
-    mrp: 233,          // Original price (cut)
-    price: 199,        // Selling price
-
-    /* ===== IMAGES (MULTIPLE) ===== */
-    images: [
-      "images/products/accord pka1.jpg",
-      "images/products/accord pka2.jpg",
-      "images/products/accord pka3.jpg",
-      "images/products/accord pka4.jpg",
-      "images/products/accord pka5.jpg",
-      "images/products/accord pka6.jpg",
-      ],
-
-    /* ===== PART DETAILS ===== */
-    partNumber: "78960-TVA-A81",
-    condition: "Used, In excellent Condition",
-    warranty: "30 Days Seller Warranty",
-    donorVehicle: "1HGCV1F1XKA157795",
-    interiorTrimCode: "Passenger Knee Side",
-
-    /* ===== VEHICLE COMPATIBILITY ===== */
-    compatibleVehicles: [
-      {
-        year: 2018,
-        make: "Honda",
-        model: "Accord",
-        
-      },
-      {
-        year: 2019,
-        make: "Honda",
-        model: "Accord"
-        
-      },
-        {
-        year: 2020,
-        make: "Honda",
-        model: "Accord"
-        
-      },
-        {
-        year: 2021,
-        make: "Honda",
-        model: "Accord"
-        
-      },
-    ],
-
-    /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM passenger knee airbag removed from the passenger's side of a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
-
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
-
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
-
-    /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
-    seo: {
-      title: "2018 2019 2020 2021 Passenger Knee Airbag Honda Accord | AutoFits USA",
-      description:
-        "Buy OEM Honda Accord passenger knee airbag for 2018–2021 models. Guaranteed fit, fast USA shipping, easy returns."
-    }
-  },
-
   { id: "volkswagen_atlas_driver_ airbag_2018_2020",
 
     /* ===== BASIC INFO ===== */
@@ -1318,13 +1240,13 @@ const PRODUCTS = [
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
-      "images/products/rav4 dsa1.jpg",
-      "images/products/rav4 dsa2.jpg",
-      "images/products/rav4 dsa3.jpg",
-      "images/products/rav4 dsa4.jpg",
-      "images/products/rav4 dsa5.jpg",
-      "images/products/rav4 dsa6.jpg",
-      "images/products/rav4 dsa7.jpg",
+      "images/products/ridgeline ab1.jpg",
+      "images/products/ridgeline ab2.jpg",
+      "images/products/ridgeline ab3.jpg",
+      "images/products/ridgeline ab4.jpg",
+      "images/products/ridgeline ab5.jpg",
+      "images/products/ridgeline ab6.jpg",
+      "images/products/ridgeline ab7.jpg",
       ],
 
     /* ===== PART DETAILS ===== */
@@ -1337,35 +1259,47 @@ const PRODUCTS = [
     /* ===== VEHICLE COMPATIBILITY ===== */
     compatibleVehicles: [
       {
-        year: 2014,
-        make: "Toyota",
-        model: "RAV4",
+        year: 2017,
+        make: "Honda",
+        model: "Ridgeline",
         
       },
       {
-        year: 2015,
-        make: "Toyota",
-        model: "RAV4"
+        year: 2018,
+        make: "Honda",
+        model: "Ridgeline"
         
       },
         {
-        year: 2016,
-        make: "Toyota",
-        model: "RAV4"
+        year: 2019,
+        make: "Honda",
+        model: "Ridgeline"
         
       },
 
       {
-        year: 2017,
-        make: "Toyota",
-        model: "RAV4"
+        year: 2020,
+        make: "Honda",
+        model: "Ridgeline"
         
       },
        
        {
-        year: 2018,
-        make: "Toyota",
-        model: "RAV4"
+        year: 2021,
+        make: "Honda",
+        model: "Ridgeline"
+        
+      },
+        {
+        year: 2022,
+        make: "Honda",
+        model: "Ridgeline"
+        
+      },
+        {
+        year: 2023,
+        make: "Honda",
+        model: "Ridgeline"
         
       },
     ],
@@ -1386,13 +1320,149 @@ const PRODUCTS = [
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
-      title: "2014 2015 2016 2017 2018 Driver Steering Wheel Airbag Toyota RAV4 | AutoFits USA",
+      title: "2017 2018 2019 2020 2021 2022 2023 Driver Steering Wheel Airbag Honda Ridgeline | AutoFits USA",
       description:
-        "Buy OEM Toyota RAV4 driver Steering wheel airbag for 2014–2018 models. Guaranteed fit, fast USA shipping, easy returns."
+        "Buy OEM Honda Ridgeline driver Steering wheel airbag for 2017–2023 models. Guaranteed fit, fast USA shipping, easy returns."
     }
   },
 
-    { id: "toyora_RAV4_driver_ airbag_2014_2018",
+ { id: "toyora_4Runner_driver_ airbag_2012_2024",
+
+    /* ===== BASIC INFO ===== */
+    name: "2012-2024 Toyota 4Runner Left LH Front Driver Steering Wheel Airbag Black OEM",
+    brand: "Toyota",
+    category: "driver airbags",
+
+    /* ===== PRICING ===== */
+    mrp: 549,          // Original price (cut)
+    price: 499,        // Selling price
+
+    /* ===== IMAGES (MULTIPLE) ===== */
+    images: [
+      "images/products/4runner ab1.jpg",
+      "images/products/4runner ab2.jpg",
+      "images/products/4runner ab3.jpg",
+      "images/products/4runner ab4.jpg",
+      "images/products/4runner ab5.jpg",
+      "images/products/4runner ab6.jpg",
+      "images/products/4runner ab7.jpg",
+    
+      ],
+
+    /* ===== PART DETAILS ===== */
+    partNumber: "147075051322",
+    condition: "Used, In excellent Condition",
+    warranty: "30 Days Seller Warranty",
+    donorVehicle: "5TFRY5F10MX279296",
+    interiorTrimCode: "Driver Steering wheel",
+
+    /* ===== VEHICLE COMPATIBILITY ===== */
+    compatibleVehicles: [
+      {
+        year: 2012,
+        make: "Toyota",
+        model: "4Runner",
+        
+      },
+      {
+        year: 2013,
+        make: "Toyota",
+        model: "4Runner"
+        
+      },
+        {
+        year: 2014,
+        make: "Toyota",
+        model: "4Runner"
+        
+      },
+
+      {
+        year: 2015,
+        make: "Toyota",
+        model: "4Runner"
+        
+      },
+       
+       {
+        year: 2016,
+        make: "Toyota",
+        model: "4Runner"
+        
+      },
+       {
+        year: 2017,
+        make: "Toyota",
+        model: "4Runner"
+        
+      },
+       {
+        year: 2018,
+        make: "Toyota",
+        model: "4Runner"
+        
+      },
+       {
+        year: 2019,
+        make: "Toyota",
+        model: "4Runner"
+        
+      },
+       {
+        year: 2020,
+        make: "Toyota",
+        model: "4Runner"
+        
+      },
+       {
+        year: 2021,
+        make: "Toyota",
+        model: "4Runner"
+        
+      },
+       {
+        year: 2022,
+        make: "Toyota",
+        model: "4Runner"
+        
+      },
+       {
+        year: 2023,
+        make: "Toyota",
+        model: "4Runner"
+        
+      },
+       {
+        year: 2024,
+        make: "Toyota",
+        model: "4Runner"
+        
+      },
+    ],
+
+    /* ===== LONG DESCRIPTION ===== */
+    description: `
+      This is a genuine OEM airbag removed from a 
+      low-mileage donor vehicle. The unit has been professionally inspected
+      and is fully functional.
+
+      ✔ Direct OEM replacement  
+      ✔ Guaranteed fit for listed vehicles  
+      ✔ No deployment, no damage  
+      ✔ VIN verification recommended before purchase  
+
+      This airbag meets all OEM safety standards and is ready for installation.
+    `,
+
+    /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
+    seo: {
+      title: "2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 Driver Steering Wheel Airbag Toyota 4Runner | AutoFits USA",
+      description:
+        "Buy OEM Toyota 4Runner driver Steering wheel airbag for 2012–2024 models. Guaranteed fit, fast USA shipping, easy returns."
+    }
+  },
+
+  { id: "toyora_RAV4_driver_ airbag_2014_2018",
 
     /* ===== BASIC INFO ===== */
     name: "2014-2018 Toyota Rav4 Driver Wheel Airbag Air Bag OEM Genuine",
@@ -1412,6 +1482,7 @@ const PRODUCTS = [
       "images/products/rav4 dsa5.jpg",
       "images/products/rav4 dsa6.jpg",
       "images/products/rav4 dsa7.jpg",
+   
       ],
 
     /* ===== PART DETAILS ===== */
@@ -1476,6 +1547,1085 @@ const PRODUCTS = [
       title: "2014 2015 2016 2017 2018 Driver Steering Wheel Airbag Toyota RAV4 | AutoFits USA",
       description:
         "Buy OEM Toyota RAV4 driver Steering wheel airbag for 2014–2018 models. Guaranteed fit, fast USA shipping, easy returns."
+    }
+  },
+
+  { id: "honda_CRV_driver_ airbag_2013_2016",
+
+    /* ===== BASIC INFO ===== */
+    name: "2013-2016 Honda CRV LH Driver Steering Wheel Airbag OEM",
+    brand: "Honda",
+    category: "driver airbags",
+
+    /* ===== PRICING ===== */
+    mrp: 549,          // Original price (cut)
+    price: 409,        // Selling price
+
+    /* ===== IMAGES (MULTIPLE) ===== */
+    images: [
+      "images/products/crv ab1.jpg",
+      "images/products/crv ab2.jpg",
+      "images/products/crv ab3.jpg",
+      "images/products/crv ab4.jpg",
+      "images/products/crv ab5.jpg",
+      "images/products/crv ab6.jpg",
+      "images/products/crv ab7.jpg",
+      ],
+
+    /* ===== PART DETAILS ===== */
+    partNumber: "77810T1WA80ZA",
+    condition: "Used, In excellent Condition",
+    warranty: "30 Days Seller Warranty",
+    donorVehicle: " 5J6RM4H38GL108273",
+    interiorTrimCode: "Driver Steering wheel",
+
+    /* ===== VEHICLE COMPATIBILITY ===== */
+    compatibleVehicles: [
+      {
+        year: 2013,
+        make: "Honda",
+        model: "CRV",
+        
+      },
+      {
+        year: 2014,
+        make: "Honda",
+        model: "CRV"
+        
+      },
+        {
+        year: 2015,
+        make: "Honda",
+        model: "CRV"
+        
+      },
+
+      {
+        year: 2016,
+        make: "Honda",
+        model: "CRV"
+        
+      },
+       
+    
+    ],
+
+    /* ===== LONG DESCRIPTION ===== */
+    description: `
+      This is a genuine OEM airbag removed from a 
+      low-mileage donor vehicle. The unit has been professionally inspected
+      and is fully functional.
+
+      ✔ Direct OEM replacement  
+      ✔ Guaranteed fit for listed vehicles  
+      ✔ No deployment, no damage  
+      ✔ VIN verification recommended before purchase  
+
+      This airbag meets all OEM safety standards and is ready for installation.
+    `,
+
+    /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
+    seo: {
+      title: "2013 2014 2015 2016 Driver Steering Wheel Airbag Honda CRV | AutoFits USA",
+      description:
+        "Buy OEM Honda CRV driver Steering wheel airbag for 2013–2016 models. Guaranteed fit, fast USA shipping, easy returns."
+    }
+  },
+
+  { id: "Acura_ILX_driver_ airbag_2016_2022",
+
+    /* ===== BASIC INFO ===== */
+    name: "2016-2022 Acura ILX Drive Wheel Airbag",
+    brand: "Acura",
+    category: "driver airbags",
+
+    /* ===== PRICING ===== */
+    mrp: 699,          // Original price (cut)
+    price: 649,        // Selling price
+
+    /* ===== IMAGES (MULTIPLE) ===== */
+    images: [
+      "images/products/ilx ab1.jpg",
+      "images/products/ilx ab2.jpg",
+      "images/products/ilx ab3.jpg",
+      "images/products/ilx ab4.jpg",
+      "images/products/ilx ab5.jpg",
+      "images/products/ilx ab6.jpg",
+      ],
+
+    /* ===== PART DETAILS ===== */
+    partNumber: "147067102237",
+    condition: "Used, In excellent Condition",
+    warranty: "30 Days Seller Warranty",
+    donorVehicle: "VINUPONREQUEST",
+    interiorTrimCode: "Driver Steering wheel",
+
+    /* ===== VEHICLE COMPATIBILITY ===== */
+    compatibleVehicles: [
+      {
+        year: 2016,
+        make: "Acura",
+        model: "ILX",
+        
+      },
+      {
+        year: 2017,
+        make: "Acura",
+        model: "ILX"
+        
+      },
+        {
+        year: 2018,
+        make: "Acura",
+        model: "ILX"
+        
+      },
+
+      {
+        year: 2019,
+        make: "Acura",
+        model: "ILX"
+        
+      },
+      {
+        year: 2020,
+        make: "Acura",
+        model: "ILX"
+        
+      },
+      {
+        year: 2021,
+        make: "Acura",
+        model: "ILX"
+        
+      },
+      {
+        year: 2022,
+        make: "Acura",
+        model: "ILX"
+        
+      },
+       
+    
+    ],
+
+    /* ===== LONG DESCRIPTION ===== */
+    description: `
+      This is a genuine OEM airbag removed from a 
+      low-mileage donor vehicle. The unit has been professionally inspected
+      and is fully functional.
+
+      ✔ Direct OEM replacement  
+      ✔ Guaranteed fit for listed vehicles  
+      ✔ No deployment, no damage  
+      ✔ VIN verification recommended before purchase  
+
+      This airbag meets all OEM safety standards and is ready for installation.
+    `,
+
+    /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
+    seo: {
+      title: "2016 2017 2018 2019 2020 2021 2022 Driver Steering Wheel Airbag Acura ILX | AutoFits USA",
+      description:
+        "Buy OEM Acura ILX driver Steering wheel airbag for 2016–2022 models. Guaranteed fit, fast USA shipping, easy returns."
+    }
+  },
+
+  { id: "honda_HRV_driver_ airbag_2016_2021",
+
+    /* ===== BASIC INFO ===== */
+    name: "2016-2021 Honda HR-V Wheel Airbag Driver Air Bag OEM",
+    brand: "Honda",
+    category: "driver airbags",
+
+    /* ===== PRICING ===== */
+    mrp: 499,          // Original price (cut)
+    price: 419,        // Selling price
+
+    /* ===== IMAGES (MULTIPLE) ===== */
+    images: [
+      "images/products/hrv ab1.jpg",
+      "images/products/hrv ab2.jpg",
+      "images/products/hrv ab3.jpg",
+      "images/products/hrv ab4.jpg",
+      "images/products/hrv ab5.jpg",
+      "images/products/hrv ab6.jpg",
+      
+      ],
+
+    /* ===== PART DETAILS ===== */
+    partNumber: "77810T7SA80",
+    condition: "Used, In excellent Condition",
+    warranty: "30 Days Seller Warranty",
+    donorVehicle: "3CZRU5H58HM714423",
+    interiorTrimCode: "Driver Steering wheel",
+
+    /* ===== VEHICLE COMPATIBILITY ===== */
+    compatibleVehicles: [
+      {
+        year: 2016,
+        make: "Honda",
+        model: "HR-V",
+        
+      },
+      {
+        year: 2017,
+        make: "Honda",
+        model: "HR-V"
+        
+      },
+        {
+        year: 2018,
+        make: "Honda",
+        model: "HR-V"
+        
+      },
+
+      {
+        year: 2019,
+        make: "Honda",
+        model: "HR-V"
+        
+      },
+
+        {
+        year: 2020,
+        make: "Honda",
+        model: "HR-V"
+        
+      },
+        {
+        year: 2021,
+        make: "Honda",
+        model: "HR-V"
+        
+      },
+       
+    
+    ],
+
+    /* ===== LONG DESCRIPTION ===== */
+    description: `
+      This is a genuine OEM airbag removed from a 
+      low-mileage donor vehicle. The unit has been professionally inspected
+      and is fully functional.
+
+      ✔ Direct OEM replacement  
+      ✔ Guaranteed fit for listed vehicles  
+      ✔ No deployment, no damage  
+      ✔ VIN verification recommended before purchase  
+
+      This airbag meets all OEM safety standards and is ready for installation.
+    `,
+
+    /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
+    seo: {
+      title: "2016 2017 2018 2019 2020 2021 Driver Steering Wheel Airbag Honda HR-V | AutoFits USA",
+      description:
+        "Buy OEM Honda HR-V driver Steering wheel airbag for 2016–2021 models. Guaranteed fit, fast USA shipping, easy returns."
+    }
+  },
+
+  { id: "Nissan_Rogue_driver_ airbag_2017_2020",
+
+    /* ===== BASIC INFO ===== */
+    name: "2017-2020 Nissan Rogue Wheel Airbag Driver Air Bag OEM",
+    brand: "Nissan",
+    category: "driver airbags",
+
+    /* ===== PRICING ===== */
+    mrp: 369,          // Original price (cut)
+    price: 299,        // Selling price
+
+    /* ===== IMAGES (MULTIPLE) ===== */
+    images: [
+      "images/products/rogue ab1.jpg",
+      "images/products/rogue ab2.jpg",
+      "images/products/rogue ab3.jpg",
+      "images/products/rogue ab4.jpg",
+      "images/products/rogue ab5.jpg",
+      "images/products/rogue ab6.jpg",
+      
+      ],
+
+    /* ===== PART DETAILS ===== */
+    partNumber: "985106FL8A",
+    condition: "Used, In excellent Condition",
+    warranty: "30 Days Seller Warranty",
+    donorVehicle: "5N1AT2MV4LC742543",
+    interiorTrimCode: "Driver Steering wheel",
+
+    /* ===== VEHICLE COMPATIBILITY ===== */
+    compatibleVehicles: [
+      {
+        year: 2017,
+        make: "Nissan",
+        model: "Rogue",
+        
+      },
+      {
+        year: 2018,
+        make: "Nissan",
+        model: "Rogue"
+        
+      },
+        {
+        year: 2019,
+        make: "Nissan",
+        model: "Rogue"
+        
+      },
+
+      {
+        year: 2020,
+        make: "Nissan",
+        model: "Rogue"
+        
+      },
+       
+    
+    ],
+
+    /* ===== LONG DESCRIPTION ===== */
+    description: `
+      This is a genuine OEM airbag removed from a 
+      low-mileage donor vehicle. The unit has been professionally inspected
+      and is fully functional.
+
+      ✔ Direct OEM replacement  
+      ✔ Guaranteed fit for listed vehicles  
+      ✔ No deployment, no damage  
+      ✔ VIN verification recommended before purchase  
+
+      This airbag meets all OEM safety standards and is ready for installation.
+    `,
+
+    /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
+    seo: {
+      title: "2017 2018 2019 2020 Driver Steering Wheel Airbag Nissan Rogue | AutoFits USA",
+      description:
+        "Buy OEM Nissan Rogue driver Steering wheel airbag for 2017–2020 models. Guaranteed fit, fast USA shipping, easy returns."
+    }
+  },
+
+  { id: "honda_Pilot_driver_ airbag_2016_2018",
+
+    /* ===== BASIC INFO ===== */
+    name: "2016-2018 Honda Pilot LH Driver Steering Wheel Airbag OEM",
+    brand: "Honda",
+    category: "driver airbags",
+
+    /* ===== PRICING ===== */
+    mrp: 569,          // Original price (cut)
+    price: 499,        // Selling price
+
+    /* ===== IMAGES (MULTIPLE) ===== */
+    images: [
+      "images/products/pilot ab1.jpg",
+      "images/products/pilot ab2.jpg",
+      "images/products/pilot ab3.jpg",
+      "images/products/pilot ab4.jpg",
+      "images/products/pilot ab5.jpg",
+      
+      
+      ],
+
+    /* ===== PART DETAILS ===== */
+    partNumber: "77810TG7A80 77810TG7A80ZA",
+    condition: "Used, In excellent Condition",
+    warranty: "30 Days Seller Warranty",
+    donorVehicle: "5FNYF5H99GB014167",
+    interiorTrimCode: "Driver Steering wheel",
+
+    /* ===== VEHICLE COMPATIBILITY ===== */
+    compatibleVehicles: [
+      {
+        year: 2016,
+        make: "Honda",
+        model: "Pilot",
+        
+      },
+      {
+        year: 2017,
+        make: "Honda",
+        model: "Pilot"
+        
+      },
+        {
+        year: 2018,
+        make: "Honda",
+        model: "Pilot"
+        
+      },
+
+
+       
+    
+    ],
+
+    /* ===== LONG DESCRIPTION ===== */
+    description: `
+      This is a genuine OEM airbag removed from a 
+      low-mileage donor vehicle. The unit has been professionally inspected
+      and is fully functional.
+
+      ✔ Direct OEM replacement  
+      ✔ Guaranteed fit for listed vehicles  
+      ✔ No deployment, no damage  
+      ✔ VIN verification recommended before purchase  
+
+      This airbag meets all OEM safety standards and is ready for installation.
+    `,
+
+    /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
+    seo: {
+      title: "2016 2017 2018 Driver Steering Wheel Airbag Honda Pilot | AutoFits USA",
+      description:
+        "Buy OEM Honda Pilot driver Steering wheel airbag for 2016–2018 models. Guaranteed fit, fast USA shipping, easy returns."
+    }
+  },
+
+  { id: "dodge_RAM_driver_ airbag_2019_2024",
+
+    /* ===== BASIC INFO ===== */
+    name: "2019-2024 Dodge Ram 3500 Limited Driver Steering Wheel Srs Airbag Black OEM",
+    brand: "Dodge",
+    category: "driver airbags",
+
+    /* ===== PRICING ===== */
+    mrp: 519,          // Original price (cut)
+    price: 430,        // Selling price
+
+    /* ===== IMAGES (MULTIPLE) ===== */
+    images: [
+      "images/products/ram ab1.jpg",
+      "images/products/ram ab2.jpg",
+      "images/products/ram ab3.jpg",
+      "images/products/ram ab4.jpg",
+      "images/products/ram ab5.jpg",
+      
+      
+      ],
+
+    /* ===== PART DETAILS ===== */
+    partNumber: "6NL99LC5AC",
+    condition: "Used, In excellent Condition",
+    warranty: "30 Days Seller Warranty",
+    donorVehicle: "3C63RRRL6LG219816",
+    interiorTrimCode: "Driver Steering wheel",
+
+    /* ===== VEHICLE COMPATIBILITY ===== */
+    compatibleVehicles: [
+      {
+        year: 2019,
+        make: "Dodge",
+        model: "RAM Limited",
+        
+      },
+      {
+        year: 2020,
+        make: "Dodge",
+        model: "RAM Limited"
+        
+      },
+        {
+        year: 2021,
+        make: "Dodge",
+        model: "RAM Limited"
+        
+      },
+          {
+        year: 2022,
+        make: "Dodge",
+        model: "RAM Limited"
+        
+      },
+          {
+        year: 2023,
+        make: "Dodge",
+        model: "RAM Limited"
+        
+      },
+          {
+        year: 2024,
+        make: "Dodge",
+        model: "RAM Limited"
+        
+      },
+
+
+       
+    
+    ],
+
+    /* ===== LONG DESCRIPTION ===== */
+    description: `
+      This is a genuine OEM airbag removed from a 
+      low-mileage donor vehicle. The unit has been professionally inspected
+      and is fully functional.
+
+      ✔ Direct OEM replacement  
+      ✔ Guaranteed fit for listed vehicles  
+      ✔ No deployment, no damage  
+      ✔ VIN verification recommended before purchase  
+
+      This airbag meets all OEM safety standards and is ready for installation.
+    `,
+
+    /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
+    seo: {
+      title: "2019 2020 2021 2022 2023 2024 Driver Steering Wheel Airbag Dodge RAM Limited | AutoFits USA",
+      description:
+        "Buy OEM Dodge RAM Limited driver Steering wheel airbag for 2019–2024 models. Guaranteed fit, fast USA shipping, easy returns."
+    }
+  },
+
+  { id: "infiniti_Q60_driver_ roofcurtainairbag_2017_2022",
+
+    /* ===== BASIC INFO ===== */
+    name: "2017-2022 Infiniti Q60 Left Driver Side Roof Curtain Airbag Air Bag OEM",
+    brand: "Infiniti",
+    category: "roof curtain airbags",
+
+    /* ===== PRICING ===== */
+    mrp: 299,          // Original price (cut)
+    price: 249,        // Selling price
+
+    /* ===== IMAGES (MULTIPLE) ===== */
+    images: [
+      "images/products/q60 rab1.jpg",
+      "images/products/q60 rab2.jpg",
+      "images/products/160 rab3.jpg",
+      "images/products/a60 rab4.jpg",
+      "images/products/q60 rab5.jpg",
+      
+      
+      ],
+
+    /* ===== PART DETAILS ===== */
+    partNumber: "K85P15CJ0A / K85P1 5CJ0A",
+    condition: "Used, In excellent Condition",
+    warranty: "30 Days Seller Warranty",
+    donorVehicle: "VINUPONREQUEST",
+    interiorTrimCode: "Driver Steering wheel",
+
+    /* ===== VEHICLE COMPATIBILITY ===== */
+    compatibleVehicles: [
+      {
+        year: 2017,
+        make: "Infiniti",
+        model: "Q60",
+        
+      },
+      {
+        year: 2018,
+        make: "Infiniti",
+        model: "Q60"
+        
+      },
+        {
+        year: 2019,
+        make: "Infiniti",
+        model: "Q60"
+        
+      },
+          {
+        year: 2020,
+        make: "Infiniti",
+        model: "Q60"
+        
+      },
+          {
+        year: 2021,
+        make: "Infiniti",
+        model: "Q60"
+        
+      },
+          {
+        year: 2022,
+        make: "Infiniti",
+        model: "Q60"
+        
+      },
+
+
+       
+    
+    ],
+
+    /* ===== LONG DESCRIPTION ===== */
+    description: `
+      This is a genuine OEM airbag removed from a 
+      low-mileage donor vehicle. The unit has been professionally inspected
+      and is fully functional.
+
+      ✔ Direct OEM replacement  
+      ✔ Guaranteed fit for listed vehicles  
+      ✔ No deployment, no damage  
+      ✔ VIN verification recommended before purchase  
+
+      This airbag meets all OEM safety standards and is ready for installation.
+    `,
+
+    /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
+    seo: {
+      title: "2017 2018 2019 2020 2021 2022 DriverRoof Curtain Airbag Infiniti Q60 | AutoFits USA",
+      description:
+        "Buy OEM Infiniti Q60 driver Steering wheel airbag for 2017–2022 models. Guaranteed fit, fast USA shipping, easy returns."
+    }
+  },
+
+  { id: "honda_fit_driver_ airbag_2016_2021",
+
+    /* ===== BASIC INFO ===== */
+    name: "2016-2021 Honda Fit LH Driver Steering Wheel Airbag Air Bag OEM",
+    brand: "Honda",
+    category: "driver airbags",
+
+    /* ===== PRICING ===== */
+    mrp: 499,          // Original price (cut)
+    price: 415,        // Selling price
+
+    /* ===== IMAGES (MULTIPLE) ===== */
+    images: [
+      "images/products/fit ab1.jpg",
+      "images/products/fit ab2.jpg",
+      "images/products/fit ab3.jpg",
+      "images/products/fit ab4.jpg",
+      "images/products/fit ab5.jpg",
+      
+      
+      ],
+
+    /* ===== PART DETAILS ===== */
+    partNumber: "77810T7SA80",
+    condition: "Used, In excellent Condition",
+    warranty: "30 Days Seller Warranty",
+    donorVehicle: "JHMGK5H71HS014771",
+    interiorTrimCode: "Driver Steering wheel",
+
+    /* ===== VEHICLE COMPATIBILITY ===== */
+    compatibleVehicles: [
+      {
+        year: 2016,
+        make: "Honda",
+        model: "Fit",
+        
+      },
+      {
+        year: 2017,
+        make: "Honda",
+        model: "Fit"
+        
+      },
+        {
+        year: 2018,
+        make: "Honda",
+        model: "Fit"
+        
+      },
+          {
+        year: 2019,
+        make: "Honda",
+        model: "Fit"
+        
+      },
+          {
+        year: 2020,
+        make: "Honda",
+        model: "Fit"
+        
+      },
+          {
+        year: 2021,
+        make: "Honda",
+        model: "Fit"
+        
+      },
+
+
+       
+    
+    ],
+
+    /* ===== LONG DESCRIPTION ===== */
+    description: `
+      This is a genuine OEM airbag removed from a 
+      low-mileage donor vehicle. The unit has been professionally inspected
+      and is fully functional.
+
+      ✔ Direct OEM replacement  
+      ✔ Guaranteed fit for listed vehicles  
+      ✔ No deployment, no damage  
+      ✔ VIN verification recommended before purchase  
+
+      This airbag meets all OEM safety standards and is ready for installation.
+    `,
+
+    /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
+    seo: {
+      title: "2016 2017 2018 2019 2020 2021 Driver Airbag Honda Fit | AutoFits USA",
+      description:
+        "Buy OEM Honda Fit driver Steering wheel airbag for 2016–2021 models. Guaranteed fit, fast USA shipping, easy returns."
+    }
+  },
+
+    { id: "hyundai_SantaCruz_driver_ airbag_2022_2024",
+
+    /* ===== BASIC INFO ===== */
+    name: "2022-2024 Hyundai Santa Cruz LH Driver Steering Wheel Airbag OEM",
+    brand: "Hyundai",
+    category: "driver airbags",
+
+    /* ===== PRICING ===== */
+    mrp: 549,          // Original price (cut)
+    price: 499,        // Selling price
+
+    /* ===== IMAGES (MULTIPLE) ===== */
+    images: [
+      "images/products/santa ab1.jpg",
+      "images/products/santa ab2.jpg",
+      "images/products/santa ab3.jpg",
+      "images/products/santa ab4.jpg",
+      "images/products/santa ab5.jpg",
+      "images/products/santa ab6.jpg",
+      "images/products/santa ab7.jpg",
+      
+      
+      ],
+
+    /* ===== PART DETAILS ===== */
+    partNumber: "A-83374540",
+    condition: "Used, In excellent Condition",
+    warranty: "30 Days Seller Warranty",
+    donorVehicle: "5NTJBDAE0RH100469",
+    interiorTrimCode: "Driver Steering wheel",
+
+    /* ===== VEHICLE COMPATIBILITY ===== */
+    compatibleVehicles: [
+      {
+        year: 2022,
+        make: "Hyundai",
+        model: "Santa Cruz",
+        
+      },
+      {
+        year: 2023,
+        make: "Hyundai",
+        model: "Santa Cruz"
+        
+      },
+        {
+        year: 2024,
+        make: "Hyundai",
+        model: "Santa Cruz"
+        
+      },
+   
+
+
+       
+    
+    ],
+
+    /* ===== LONG DESCRIPTION ===== */
+    description: `
+      This is a genuine OEM airbag removed from a 
+      low-mileage donor vehicle. The unit has been professionally inspected
+      and is fully functional.
+
+      ✔ Direct OEM replacement  
+      ✔ Guaranteed fit for listed vehicles  
+      ✔ No deployment, no damage  
+      ✔ VIN verification recommended before purchase  
+
+      This airbag meets all OEM safety standards and is ready for installation.
+    `,
+
+    /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
+    seo: {
+      title: "2022 2023 2024 Driver Airbag Hyundai Santa Cruz | AutoFits USA",
+      description:
+        "Buy OEM Hyundai Santa Cruz driver Steering wheel airbag for 2022–2024 models. Guaranteed fit, fast USA shipping, easy returns."
+    }
+  },
+
+      { id: "Infiniti_QX50_driver_ airbag_2019_2020",
+
+    /* ===== BASIC INFO ===== */
+    name: "2019-2020 Infiniti QX50 Wheel Airbag Driver Air Bag OEM",
+    brand: "Infiniti",
+    category: "driver airbags",
+
+    /* ===== PRICING ===== */
+    mrp: 549,          // Original price (cut)
+    price: 459,        // Selling price
+
+    /* ===== IMAGES (MULTIPLE) ===== */
+    images: [
+      "images/products/qx50 ab1.jpg",
+      "images/products/qx50 ab2.jpg",
+      "images/products/qx50 ab3.jpg",
+      "images/products/qx50 ab4.jpg",
+      "images/products/qx50 ab5.jpg",
+      "images/products/qx50 ab6.jpg",
+      
+      
+      
+      ],
+
+    /* ===== PART DETAILS ===== */
+    partNumber: "985105NA8A",
+    condition: "Used, In excellent Condition",
+    warranty: "30 Days Seller Warranty",
+    donorVehicle: "3PCAJ5M11KF144808",
+    interiorTrimCode: "Driver Steering wheel",
+
+    /* ===== VEHICLE COMPATIBILITY ===== */
+    compatibleVehicles: [
+      {
+        year: 2019,
+        make: "Infiniti",
+        model: "QX50",
+        
+      },
+      {
+        year: 2020,
+        make: "Infiniti",
+        model: "QX50"
+        
+      },
+     
+   
+
+
+       
+    
+    ],
+
+    /* ===== LONG DESCRIPTION ===== */
+    description: `
+      This is a genuine OEM airbag removed from a 
+      low-mileage donor vehicle. The unit has been professionally inspected
+      and is fully functional.
+
+      ✔ Direct OEM replacement  
+      ✔ Guaranteed fit for listed vehicles  
+      ✔ No deployment, no damage  
+      ✔ VIN verification recommended before purchase  
+
+      This airbag meets all OEM safety standards and is ready for installation.
+    `,
+
+    /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
+    seo: {
+      title: "2019 2020 Driver Airbag Infiniti QX50 | AutoFits USA",
+      description:
+        "Buy OEM Infiniti QX50 driver Steering wheel airbag for 2019–2020 models. Guaranteed fit, fast USA shipping, easy returns."
+    }
+  },
+
+        { id: "nissan_altima_driver_ airbag_2015_2018",
+
+    /* ===== BASIC INFO ===== */
+    name: "2015-2018 Nissan Altima Driver Wheel Airbag Air Bag OEM",
+    brand: "Nissan",
+    category: "driver airbags",
+
+    /* ===== PRICING ===== */
+    mrp: 349,          // Original price (cut)
+    price: 229,        // Selling price
+
+    /* ===== IMAGES (MULTIPLE) ===== */
+    images: [
+      "images/products/altima ab1.jpg",
+      "images/products/altima ab2.jpg",
+      "images/products/altima ab3.jpg",
+      "images/products/altima ab4.jpg",
+      "images/products/altima ab5.jpg",
+      
+      
+      
+      
+      ],
+
+    /* ===== PART DETAILS ===== */
+    partNumber: "253-55582",
+    condition: "Used, In excellent Condition",
+    warranty: "30 Days Seller Warranty",
+    donorVehicle: "1N4BL3APXFC150823",
+    interiorTrimCode: "Driver Steering wheel",
+
+    /* ===== VEHICLE COMPATIBILITY ===== */
+    compatibleVehicles: [
+      {
+        year: 2015,
+        make: "Nissan",
+        model: "Altima",
+        
+      },
+      {
+        year: 2016,
+        make: "Nissan",
+        model: "Altima"
+        
+      },
+        {
+        year: 2017,
+        make: "Nissan",
+        model: "Altima"
+        
+      },
+        {
+        year: 2018,
+        make: "Nissan",
+        model: "Altima"
+        
+      },
+     
+   
+
+
+       
+    
+    ],
+
+    /* ===== LONG DESCRIPTION ===== */
+    description: `
+      This is a genuine OEM airbag removed from a 
+      low-mileage donor vehicle. The unit has been professionally inspected
+      and is fully functional.
+
+      ✔ Direct OEM replacement  
+      ✔ Guaranteed fit for listed vehicles  
+      ✔ No deployment, no damage  
+      ✔ VIN verification recommended before purchase  
+
+      This airbag meets all OEM safety standards and is ready for installation.
+    `,
+
+    /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
+    seo: {
+      title: "2015 2016 2017 2018 Driver Airbag Nissan Altima | AutoFits USA",
+      description:
+        "Buy OEM Nissan Altima driver Steering wheel airbag for 2015–2018 models. Guaranteed fit, fast USA shipping, easy returns."
+    }
+  },
+
+ { id: "dodge_charger_right_ roofcurtainairbag_2016_2023",
+
+    /* ===== BASIC INFO ===== */
+    name: "2016-2023 Dodge Charger Right Side Roof Curtain Airbag Air Bag OEM",
+    brand: "Dodge",
+    category: "roof curtain airbags",
+
+    /* ===== PRICING ===== */
+    mrp: 349,          // Original price (cut)
+    price: 229,        // Selling price
+
+    /* ===== IMAGES (MULTIPLE) ===== */
+    images: [
+      "images/products/charger rab1.jpg",
+      "images/products/charger rab2.jpg",
+      "images/products/charger rab3.jpg",
+      "images/products/charger rab4.jpg",
+      "images/products/charger rab5.jpg",
+      
+      
+      
+      
+      ],
+
+    /* ===== PART DETAILS ===== */
+    partNumber: "68222742AG / 68222742 AG",
+    condition: "Used, In excellent Condition",
+    warranty: "30 Days Seller Warranty",
+    donorVehicle: "2C3CDXBG5MH588052",
+    interiorTrimCode: "Front Right Roof",
+
+    /* ===== VEHICLE COMPATIBILITY ===== */
+    compatibleVehicles: [
+      
+      {
+        year: 2016,
+        make: "Dodge",
+        model: "Charger"
+        
+      },
+        {
+        year: 2017,
+        make: "Dodge",
+        model: "Charger"
+        
+      },
+        {
+        year: 2018,
+        make: "Dodge",
+        model: "Charger"
+        
+      },
+        {
+        year: 2019,
+        make: "Dodge",
+        model: "Charger"
+        
+      },
+     
+        {
+        year: 2020,
+        make: "Dodge",
+        model: "Charger"
+        
+      },
+     
+        {
+        year: 2021,
+        make: "Dodge",
+        model: "Charger"
+        
+      },
+     
+        {
+        year: 2022,
+        make: "Dodge",
+        model: "Charger"
+        
+      },
+     
+        {
+        year: 2023,
+        make: "Dodge",
+        model: "Charger"
+        
+      },
+     
+     
+   
+
+
+       
+    
+    ],
+
+    /* ===== LONG DESCRIPTION ===== */
+    description: `
+      This is a genuine OEM airbag removed from a 
+      low-mileage donor vehicle. The unit has been professionally inspected
+      and is fully functional.
+
+      ✔ Direct OEM replacement  
+      ✔ Guaranteed fit for listed vehicles  
+      ✔ No deployment, no damage  
+      ✔ VIN verification recommended before purchase  
+
+      This airbag meets all OEM safety standards and is ready for installation.
+    `,
+
+    /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
+    seo: {
+      title: "2016 2017 2018 2019 2020 2021 2022 2023 Driver Airbag Dodge Charger | AutoFits USA",
+      description:
+        "Buy OEM Dodge Charger driver Steering wheel airbag for 2016–2023 models. Guaranteed fit, fast USA shipping, easy returns."
     }
   },
 
