@@ -58,6 +58,10 @@ if (!items.length) {
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       payment_method_types: ["card"],
+      shipping_address_collection: {
+        allowed_countries: ["US"]
+      },
+      billing_address_collection: "required",
       line_items: lineItems,
 
       metadata: {

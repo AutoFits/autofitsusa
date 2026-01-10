@@ -30,17 +30,17 @@ exports.handler = async (event) => {
   const customerName = session.customer_details?.name || "N/A";
   const customerEmail = session.customer_details?.email || "N/A";
 
-  const address = session.customer_details?.address || {};
-  const city = address.city || "";
-  const state = address.state || "";
-  const postal = address.postal_code || "";
-  const country = address.country || "";
+const addr = session.customer_details?.address || {};
 
-  const fullAddress = [
-    city && state ? `${city}, ${state}` : city || state,
-    postal,
-    country
-  ].filter(Boolean).join("\n");
+const fullAddress = [
+  addr.line1,
+  addr.line2,
+  addr.city,
+  addr.state,
+  addr.postal_code,
+  addr.country
+].filter(Boolean).join("\n");
+
 
   /* =========================
      ITEMS (FROM METADATA)
