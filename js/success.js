@@ -18,6 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCartCount();
   }
 });
+function goHome() {
+  window.location.href = "index.html";
+}
+
+function continueShopping() {
+  window.location.href = "shop.html";
+}
 
 
 

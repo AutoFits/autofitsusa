@@ -22,16 +22,23 @@ exports.handler = async (event) => {
     const email = session.customer_details?.email || "Not provided";
     const addr = session.customer_details?.address || {};
 
-    const fullAddress = `
-${addr.line1 || ""}
-${addr.city || ""}, ${addr.state || ""} ${addr.postal_code || ""}
-${addr.country || ""}
-    `;
+    // ✅ Proper formatted full address
+    const fullAddress = [
+      addr.line1,
+      addr.line2,
+      `${addr.city || ""}, ${addr.state || ""} ${addr.postal_code || ""}`,
+      addr.country
+    ]
+      .filter(Boolean)
+      .join("\n");
 
-    const items = session.metadata?.items
-      ? JSON.parse(session.metadata.items)
-          .map(i => `${i.name} (Qty: ${i.qty})`)
-          .join("\n")
+    // ✅ Fetch cart items from metadata (from create-checkout-session.js)
+    const cartItems = session.metadata?.cart
+      ? JSON.parse(session.metadata.cart)
+      : [];
+
+    const itemsText = cartItems.length
+      ? cartItems.map(i => `${i.name || "Unknown item"} (Qty: ${i.qty || 1})`).join("\n")
       : "Items not available";
 
     const amount = (session.amount_total / 100).toFixed(2);
@@ -61,13 +68,14 @@ Shipping Address:
 ${fullAddress}
 
 Items:
-${items}
+${itemsText}
 
 Amount Paid: $${amount}
+
+Please process this order.
       `,
     });
   }
 
   return { statusCode: 200, body: "ok" };
 };
-

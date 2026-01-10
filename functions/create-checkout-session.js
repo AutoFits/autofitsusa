@@ -11,31 +11,34 @@ exports.handler = async (event) => {
       };
     }
 
-    const { totalAmount, cartItems } = JSON.parse(event.body);
+const { totalAmount, cartItems } = JSON.parse(event.body);
 
-    const session = await stripe.checkout.sessions.create({
-      payment_method_types: ["card"],
-      mode: "payment",
-      line_items: [
-        {
-          price_data: {
-            currency: "usd",
-            product_data: {
-              name: "AutoFits USA Order",
-            },
-            unit_amount: Math.round(totalAmount * 100), // dollars → cents
-          },
-          quantity: 1,
-        },
-      ],
-      success_url: `${process.env.SITE_URL}/success.html?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.SITE_URL}/checkout.html`,
-      metadata: {
-  items: JSON.stringify(cartItems) // array [{name, qty}]
-}
+const session = await stripe.checkout.sessions.create({
+  payment_method_types: ["card"],
+  mode: "payment",
+
+  line_items: cartItems.map(item => ({
+    price_data: {
+      currency: "usd",
+      product_data: {
+        name: item.name, // ✅ REAL PRODUCT NAME
+      },
+      unit_amount: Math.round(item.price * 100),
+    },
+    quantity: item.qty,
+  })),
+
+  metadata: {
+    cart: JSON.stringify(cartItems), // ✅ FOR WEBHOOK EMAIL
+  },
+
+  success_url: `${process.env.SITE_URL}/success.html?session_id={CHECKOUT_SESSION_ID}`,
+  cancel_url: `${process.env.SITE_URL}/checkout.html`,
+});
+
 
       
-    });
+ 
 
     return {
       statusCode: 200,

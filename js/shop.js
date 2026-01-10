@@ -120,3 +120,4 @@ function updateCartCount() {
 }
 
 document.addEventListener("DOMContentLoaded", updateCartCount);
+window.addEventListener("storage", updateCartCount);
