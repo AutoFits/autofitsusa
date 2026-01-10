@@ -30,17 +30,15 @@ exports.handler = async (event) => {
   const customerName = session.customer_details?.name || "N/A";
   const customerEmail = session.customer_details?.email || "N/A";
 
-const addr = session.customer_details?.address || {};
-
-const fullAddress = [
-  addr.line1,
-  addr.line2,
-  addr.city,
-  addr.state,
-  addr.postal_code,
-  addr.country
-].filter(Boolean).join("\n");
-
+  const addr = session.customer_details?.address || {};
+  const fullAddress = [
+    addr.line1,
+    addr.line2,
+    addr.city,
+    addr.state,
+    addr.postal_code,
+    addr.country
+  ].filter(Boolean).join("\n");
 
   /* =========================
      ITEMS (FROM METADATA)
@@ -51,7 +49,7 @@ const fullAddress = [
     try {
       const items = JSON.parse(session.metadata.items);
       itemsText = items
-        .map(i => `• ${i.name}  ×  ${i.qty}`)
+        .map(i => `• ${i.name} × ${i.qty}`)
         .join("\n");
     } catch (e) {
       console.error("Item parse error:", e.message);
@@ -66,7 +64,7 @@ const fullAddress = [
   const orderId = session.id;
 
   /* =========================
-     EMAIL SETUP
+     EMAIL TRANSPORT
   ========================= */
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -76,9 +74,15 @@ const fullAddress = [
     }
   });
 
-  const emailBody = `
-AUTOFiTS USA — ORDER INVOICE
-──────────────────────────────
+  /* =========================
+     INTERNAL ORDER EMAIL
+  ========================= */
+  await transporter.sendMail({
+    from: `"AutoFits USA Orders" <${process.env.ORDER_EMAIL}>`,
+    to: process.env.ORDER_EMAIL,
+    subject: `🧾 New Order Received — ${orderId}`,
+    text: `
+AUTOFiTS USA — NEW ORDER
 
 Order ID:
 ${orderId}
@@ -88,102 +92,55 @@ ${customerName}
 ${customerEmail}
 
 Shipping Address:
-${fullAddress || "Address not provided"}
+${fullAddress || "Not provided"}
 
-──────────────────────────────
 Items Ordered:
 ${itemsText}
 
-──────────────────────────────
 Total Paid: ${currency} $${amountPaid}
 
 Payment Status: PAID
-Payment Method: Card (Stripe)
-
-──────────────────────────────
-Please process this order.
-
-— AutoFits USA
-`;
-
-  await transporter.sendMail({
-    from: `"AutoFits USA Orders" <${process.env.ORDER_EMAIL}>`,
-    to: process.env.ORDER_EMAIL,
-    subject: `🧾 New Order Invoice — ${orderId}`,
-    text: emailBody
+    `
   });
 
-  return { statusCode: 200, body: "Email sent" };
-};
-
-// ===============================
-// CUSTOMER INVOICE EMAIL
-// ===============================
-
-const customerEmail = session.customer_details?.email;
-
-if (customerEmail) {
-  const custName = session.customer_details?.name || "Customer";
-  const addr = session.customer_details?.address || {};
-
-  const customerAddress = `
-${addr.line1 || ""}
-${addr.line2 || ""}
-${addr.city || ""}, ${addr.state || ""} ${addr.postal_code || ""}
-${addr.country || ""}
-  `.trim();
-
-  const customerItems = session.metadata?.items
-    ? JSON.parse(session.metadata.items)
-        .map(i => `• ${i.name} × ${i.qty}`)
-        .join("\n")
-    : "Item details unavailable";
-
-  const paidAmount = (session.amount_total / 100).toFixed(2);
-
-  await transporter.sendMail({
-    from: `"AutoFits USA" <${process.env.ORDER_EMAIL}>`,
-    to: customerEmail,
-    subject: "🧾 Your AutoFits USA Order Confirmation",
-    text: `
+  /* =========================
+     CUSTOMER INVOICE EMAIL
+  ========================= */
+  if (customerEmail && customerEmail !== "N/A") {
+    await transporter.sendMail({
+      from: `"AutoFits USA" <${process.env.ORDER_EMAIL}>`,
+      to: customerEmail,
+      subject: "🧾 Your AutoFits USA Order Confirmation",
+      text: `
 Thank you for your order with AutoFits USA!
 
-Your order has been successfully placed and payment is confirmed.
+Your payment has been successfully processed.
 
 ━━━━━━━━━━━━━━━━━━━━━━
 ORDER DETAILS
 ━━━━━━━━━━━━━━━━━━━━━━
 
 Order ID:
-${session.id}
-
-Customer:
-${custName}
-${customerEmail}
+${orderId}
 
 Shipping Address:
-${customerAddress}
+${fullAddress || "Not provided"}
 
 Items Ordered:
-${customerItems}
+${itemsText}
 
-Total Paid: USD $${paidAmount}
-
-Payment Status: PAID
-Payment Method: Card (Stripe)
+Total Paid: ${currency} $${amountPaid}
 
 ━━━━━━━━━━━━━━━━━━━━━━
 NEED HELP?
 ━━━━━━━━━━━━━━━━━━━━━━
 📧 Email: support@autofitsusa.com
-📞 Phone: (Contact number coming soon)
 
 We appreciate your business!
-Your order will be processed shortly.
-
 — AutoFits USA
-    `
-  });
-}
+      `
+    });
+  }
 
-
+  return { statusCode: 200, body: "Emails sent" };
+};
