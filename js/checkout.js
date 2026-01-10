@@ -3,20 +3,20 @@
 ========================= */
 document.addEventListener("DOMContentLoaded", () => {
   const totalEl = document.getElementById("total");
-  if (!totalEl) return;
+  const rawTotal = localStorage.getItem("cartTotal");
 
-  const storedTotal = localStorage.getItem("cartTotal");
-  totalEl.textContent = storedTotal ? `$${storedTotal}` : "$0.00";
+  if (totalEl) {
+    totalEl.textContent = rawTotal ? `$${rawTotal}` : "$0.00";
+  }
 });
 
 /* =========================
    PLACE ORDER
 ========================= */
 async function placeOrder() {
-
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  if (!cart.length) {
+  if (!Array.isArray(cart) || cart.length === 0) {
     alert("Your cart is empty.");
     return;
   }
@@ -26,80 +26,50 @@ async function placeOrder() {
   const email     = document.getElementById("email")?.value.trim();
   const address   = document.getElementById("address")?.value.trim();
 
-  const name = `${firstName} ${lastName}`.trim();
-
-  if (!firstName || !lastName || !address) {
-    alert("Please fill in all required fields.");
+  if (!firstName || !lastName || !email || !address) {
+    alert("Please fill all required fields.");
     return;
   }
 
-const rawTotal = localStorage.getItem("cartTotal");
+  const rawTotal = localStorage.getItem("cartTotal");
+  const totalAmount = Number(rawTotal);
 
-const total = rawTotal
-  ? Number(rawTotal.replace(/[^0-9.]/g, ""))
-  : 0;
-
-if (Number.isNaN(total) || total <= 0) {
-  alert("Invalid order total. Please refresh the cart.");
-  return;
-}
-
-  const orderId = "AFU-" + Date.now();
+  if (!Number.isFinite(totalAmount) || totalAmount <= 0) {
+    alert("Invalid cart total.");
+    return;
+  }
 
   try {
-    const response = await fetch(
-      "/.netlify/functions/create-checkout-session",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-body: JSON.stringify({
-  orderId,
-  totalAmount: total,
-  items: cart.map(item => ({
-    name: item.name || item.id,
-    qty: item.qty || 1
-  })),
-  customer_name: name,
-  customer_email: email,
-  customer_address: address
-})
+    const res = await fetch("/.netlify/functions/create-checkout-session", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        totalAmount,
+        items: cart, // 🔥 SINGLE SOURCE OF TRUTH
+        customer: {
+          name: `${firstName} ${lastName}`,
+          email,
+          address
+        }
+      })
+    });
 
-
-
-      }
-    );
-
-    const text = await response.text();
-    const data = text ? JSON.parse(text) : {};
-
+    const data = await res.json();
 
     if (data.url) {
-      window.location.href = data.url; // 🚀 Stripe redirect
+      window.location.href = data.url;
     } else {
       console.error(data);
       alert("Payment initialization failed.");
     }
-
   } catch (err) {
-    console.error("Checkout error:", err);
-    alert("Something went wrong. Please try again.");
+    console.error(err);
+    alert("Something went wrong.");
   }
 }
 
-
-
 /* =========================
-   EMAIL (OPTIONAL – KEEP)
-========================= */
-function sendOrderEmail(orderData) {
-  emailjs
-    .send("service_7smhfj3", "template_ldvnhyj", orderData)
-    .then(() => console.log("Order email sent"))
-    .catch(err => console.error("Email error:", err));
-}
-
-/* =========================
-   BUTTON BINDING
+   BUTTON
 ========================= */
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("placeOrderBtn");
