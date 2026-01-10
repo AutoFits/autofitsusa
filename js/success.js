@@ -1,22 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("✅ SUCCESS PAGE LOADED — CLEARING CART");
+  const params = new URLSearchParams(window.location.search);
+  const sessionId = params.get("session_id");
 
-  // Clear cart completely
+  const orderEl = document.getElementById("orderId");
+
+  if (sessionId) {
+    orderEl.textContent = sessionId;
+  } else {
+    orderEl.textContent = "Order confirmed";
+  }
+
+  // 🔥 Clear cart after successful payment
   localStorage.removeItem("cart");
   localStorage.removeItem("cartTotal");
 
-  // Force navbar cart badge to zero
-  const badge = document.getElementById("cartCount");
-  if (badge) badge.textContent = "0";
+  if (typeof updateCartCount === "function") {
+    updateCartCount();
+  }
 });
 
-/* Buttons */
-function goHome() {
-  window.location.href = "index.html";
-}
-
-function continueShopping() {
-  window.location.href = "shop.html";
-}
 
 

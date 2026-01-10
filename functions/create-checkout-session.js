@@ -28,8 +28,12 @@ exports.handler = async (event) => {
           quantity: 1,
         },
       ],
-      success_url: `${process.env.SITE_URL}/success.html`,
+      success_url: `${process.env.SITE_URL}/success.html?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.SITE_URL}/checkout.html`,
+      metadata: {
+  items: JSON.stringify(cartItems) // array [{name, qty}]
+}
+
       
     });
 
@@ -44,5 +48,8 @@ exports.handler = async (event) => {
       body: JSON.stringify({ error: err.message }),
     };
   }
+  
 };
+
+
 

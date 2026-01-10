@@ -39,28 +39,30 @@
   <!-- SUPPORT OPTIONS -->
   <div class="support-grid">
 
-    <div class="support-card">
-      <h3>📧 Email Support</h3>
-      <p>Reach us anytime</p>
-      <strong>support@autofitsusa.com</strong>
-    </div>
+<div class="support-card clickable" onclick="location.href='compatibility.html'">
+  <h3>Part Compatibility</h3>
+  <p>Learn how to verify fitment before ordering.</p>
+</div>
 
-    <div class="support-card">
-      <h3>📦 Order & Shipping</h3>
-      <p>Track orders, delivery & returns</p>
-    </div>
+<div class="support-card clickable" onclick="location.href='returns.html'">
+  <h3>Returns & Refunds</h3>
+  <p>View our return policy and process.</p>
+</div>
 
-    <div class="support-card">
-      <h3>🛠 Part Compatibility</h3>
-      <p>Need help choosing the right part?</p>
-    </div>
+<div class="support-card clickable"
+     onclick="window.location.href='mailto:support@autofitsusa.com'">
+  <h3>Email Support</h3>
+  <p>Get help from our support team.</p>
+</div>
 
-    <div class="support-card">
-      <h3>🔄 Returns & Refunds</h3>
-      <p>Easy & transparent return process</p>
-    </div>
+<a href="https://wa.me/1XXXXXXXXXX"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Chat on WhatsApp">
+  💬
+</a>
 
-  </div>
+
 
   <!-- FAQ -->
   <section class="faq">
@@ -84,26 +86,7 @@
 
 </main>
 
-<!-- CHAT BUTTON -->
-<button class="chat-btn" onclick="toggleChat()">💬</button>
 
-<!-- CHAT BOX -->
-<div class="chat-box hidden" id="chatBox">
-  <div class="chat-header">
-    <span>AutoFits Support</span>
-    <button onclick="toggleChat()">✕</button>
-  </div>
-
-  <div class="chat-messages" id="chatMessages">
-    <div class="bot-msg">
-      Hi 👋 How can we help you today?
-    </div>
-  </div>
-
-  <div class="chat-input">
-    <input type="text" id="chatInput" placeholder="Type your message..." />
-    <button onclick="sendMessage()">Send</button>
-  </div>
 </div>
 <!-- FOOTER -->
 <footer class="footer">

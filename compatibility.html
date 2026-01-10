@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-left">
+    <a href="index.html" class="logo">AutoFits<span>USA</span></a>
+  </div>
+
+  <div class="nav-right">
+    <div class="cart-icon" onclick="goToCart()">
+      🛒 <span id="cartCount">0</span>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop Parts</a>
+    <a href="how.html">How It Works</a>
+    <a href="support.html">Support</a>
+  </nav>
+</header>
+
+  <link rel="stylesheet" href="css/compatibitlity.css" />
+<section class="compatibility">
+  <h1>How to Check Part Compatibility</h1>
+
+  <ol class="compat-steps">
+    <li>Check the vehicle year, make, and model listed on the product page.</li>
+    <li>Match the part number with your original part if available.</li>
+    <li>Review the “Compatible Vehicles” section on each listing.</li>
+    <li>If unsure, contact support before ordering.</li>
+  </ol>
+
+  <div class="compat-note">
+    <strong>Important:</strong>
+    We certify that all airbags sold are not subject to recall and are shipped
+    in compliance with hazmat regulations.
+  </div>
+</section>
+<script>function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("show");
+}</script>

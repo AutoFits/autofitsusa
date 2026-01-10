@@ -1,7 +1,5 @@
-const Stripe = require("stripe");
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const nodemailer = require("nodemailer");
-
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 exports.handler = async (event) => {
   const sig = event.headers["stripe-signature"];
@@ -14,52 +12,30 @@ exports.handler = async (event) => {
       process.env.STRIPE_WEBHOOK_SECRET
     );
   } catch (err) {
-    return {
-      statusCode: 400,
-      body: `Webhook Error: ${err.message}`,
-    };
+    return { statusCode: 400, body: err.message };
   }
 
-  // ✅ PAYMENT SUCCESS
   if (stripeEvent.type === "checkout.session.completed") {
     const session = stripeEvent.data.object;
 
-    /* =====================
-       CUSTOMER DETAILS
-    ====================== */
-    const customerName =
-      session.customer_details?.name || "Not provided";
-    const customerEmail =
-      session.customer_details?.email || "Not provided";
+    const name = session.customer_details?.name || "Not provided";
+    const email = session.customer_details?.email || "Not provided";
+    const addr = session.customer_details?.address || {};
 
-    const addr = session.customer_details?.address;
+    const fullAddress = `
+${addr.line1 || ""}
+${addr.city || ""}, ${addr.state || ""} ${addr.postal_code || ""}
+${addr.country || ""}
+    `;
 
-    const fullAddress = addr
-      ? `${addr.line1 || ""}
-${addr.line2 ? addr.line2 + "\n" : ""}${addr.city || ""}, ${addr.state || ""} ${addr.postal_code || ""}
-${addr.country || ""}`
-      : "Address not provided";
+    const items = session.metadata?.items
+      ? JSON.parse(session.metadata.items)
+          .map(i => `${i.name} (Qty: ${i.qty})`)
+          .join("\n")
+      : "Items not available";
 
     const amount = (session.amount_total / 100).toFixed(2);
-    const orderId = session.id;
 
-    /* =====================
-       FETCH LINE ITEMS
-    ====================== */
-    const lineItems = await stripe.checkout.sessions.listLineItems(
-      session.id,
-      { limit: 100 }
-    );
-
-    let itemsText = "";
-
-    lineItems.data.forEach((item, index) => {
-      itemsText += `${index + 1}. ${item.description} — Qty: ${item.quantity}\n`;
-    });
-
-    /* =====================
-       SEND EMAIL
-    ====================== */
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -68,40 +44,30 @@ ${addr.country || ""}`
       },
     });
 
-    const mailOptions = {
-      from: `"AutoFitsUSA Orders" <${process.env.ORDER_EMAIL}>`,
+    await transporter.sendMail({
+      from: `"AutoFits USA Orders" <${process.env.ORDER_EMAIL}>`,
       to: process.env.ORDER_EMAIL,
-      subject: `🧾 New Order Received – ${orderId}`,
+      subject: `🧾 New Order – ${session.id}`,
       text: `
-NEW ORDER RECEIVED
+New Order Received
 
-Order ID:
-${orderId}
+Order ID: ${session.id}
 
-Customer Name:
-${customerName}
-
-Customer Email:
-${customerEmail}
+Customer:
+${name}
+${email}
 
 Shipping Address:
 ${fullAddress}
 
-Items Ordered:
-${itemsText}
+Items:
+${items}
 
-Amount Paid:
-$${amount}
-
-Please process this order.
+Amount Paid: $${amount}
       `,
-    };
-
-    await transporter.sendMail(mailOptions);
+    });
   }
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ received: true }),
-  };
+  return { statusCode: 200, body: "ok" };
 };
+
