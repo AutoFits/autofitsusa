@@ -80,7 +80,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -88,7 +88,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -179,7 +178,6 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
 `,
 
 highlights: [
@@ -187,7 +185,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -275,7 +272,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -283,7 +280,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -371,7 +367,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -379,7 +375,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -471,7 +466,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -479,7 +474,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -550,7 +544,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -558,7 +552,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -650,7 +643,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -658,7 +651,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -734,7 +726,7 @@ It has no damage or tampering.
 We certify that this sensor is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -742,7 +734,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -818,7 +809,7 @@ It has no damage or tampering.
 We certify that this sensor is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -826,7 +817,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -920,7 +910,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this engine mount is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -928,7 +918,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -990,7 +979,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -998,7 +987,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -1090,7 +1078,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -1098,7 +1086,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -1179,7 +1166,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -1187,7 +1174,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -1263,7 +1249,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -1271,7 +1257,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -1372,7 +1357,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -1380,7 +1365,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -1482,7 +1466,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -1490,7 +1474,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -1629,7 +1612,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -1637,7 +1620,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -1728,7 +1710,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -1736,7 +1718,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -1821,7 +1802,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -1829,7 +1810,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -1931,7 +1911,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -1939,7 +1919,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -2037,7 +2016,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -2045,7 +2024,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -2129,15 +2107,14 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
-  "Direct OEM replacement",
+   "Direct OEM replacement",
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -2217,7 +2194,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -2225,7 +2202,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -2242,7 +2218,7 @@ highlights: [
   { id: "dodge_RAM_driver_ airbag_2019_2024",
 
     /* ===== BASIC INFO ===== */
-    name: "2019-2024 Dodge Ram 3500 Limited Driver Steering Wheel Srs Airbag Black OEM",
+    name: "2019-2024 Dodge RAM 3500 Limited Driver Steering Wheel Srs Airbag Black OEM",
     brand: "Dodge",
     category: "driver airbags",
 
@@ -2323,7 +2299,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -2331,7 +2307,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -2429,7 +2404,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -2437,7 +2412,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -2535,7 +2509,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -2543,7 +2517,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -2626,7 +2599,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -2634,7 +2607,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -2712,7 +2684,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -2720,7 +2692,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -2810,7 +2781,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -2818,7 +2789,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"
@@ -2938,7 +2908,7 @@ It has never been deployed and shows no damage or tampering.
 We certify that this airbag is not subject to any active manufacturer recall and will be shipped
 in full compliance with hazmat shipping requirements.
 
-VIN verification is strongly recommended prior to purchase to ensure compatibility.
+
 `,
 
 highlights: [
@@ -2946,7 +2916,6 @@ highlights: [
   "Guaranteed fit for listed vehicles",
   "No deployment, no damage",
   "Professionally inspected and tested",
-  "VIN verification recommended before purchase",
   "Meets all OEM safety standards",
   "Not subject to any active manufacturer recall",
   "Hazmat-compliant shipping"

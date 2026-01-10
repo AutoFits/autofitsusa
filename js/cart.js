@@ -139,8 +139,8 @@ function setTotals(subtotal, discount) {
   const totalEl = document.getElementById("total");
   const discountRow = document.getElementById("discountRow");
 
-  const shipping = subtotal > 0 ? 15 : 0;
-  const total = subtotal - discount + shipping;
+  
+  const total = subtotal - discount;
   localStorage.setItem("cartTotal", total.toFixed(2));
 
   if (subtotalEl) subtotalEl.textContent = subtotal.toFixed(2);

@@ -340,6 +340,7 @@
   /* 👇 THIS fixes alignment & spacing */
   margin: 40px 0 24px;   /* same spacing everywhere */
   padding-left: 16px;    /* consistent left offset */
+  margin-top: 8px;
 }
 
 /* Ensure sections below don't creep up */
@@ -417,5 +418,61 @@
   .trust-card {
     font-size: 15px;
     padding: 16px;
+  }
+}
+/* TRUST SLIDER */
+.trust-slider {
+  overflow: hidden;
+  background: #f9fafb;
+  padding: 14px 0;
+  margin: 6px 0 8px;
+}
+
+.trust-track {
+  display: flex;
+  width: max-content;
+  animation: slide-left 18s linear infinite;
+}
+
+.trust-item {
+  background: #ffffff;
+  margin: 0 12px;
+  padding: 14px 22px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #111827;
+  white-space: nowrap;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+/* Animation */
+@keyframes slide-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile tuning */
+@media (max-width: 768px) {
+  .trust-item {
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+
+  .trust-track {
+    animation-duration: 14s;
+  }
+}
+@media (max-width: 768px) {
+  .trust-slider {
+    margin-bottom: 4px;
+  }
+
+  .section-title {
+    margin-top: 0px;
   }
 }

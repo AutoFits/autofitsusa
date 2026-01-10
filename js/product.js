@@ -74,10 +74,12 @@
       </div>
 
       <ul class="features">
+        <li> 🚚 Free Shipping • No Hidden Fees</li>
         <li>✅ Guaranteed Fit</li>
         <li>🛡️ OEM Quality Tested</li>
         <li>🔄 Easy Returns</li>
         <li>🚚 Fast USA Shipping</li>
+
       </ul>
 
       <div class="actions">
