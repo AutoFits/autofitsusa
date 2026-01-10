@@ -84,15 +84,29 @@
         <button class="add-btn" onclick="addItem('${product.id}')">
           Add to Cart
         </button>
-        <button class="wishlist-btn" id="wishlistBtn">♡</button>
+        
       </div>
 
       <div class="product-section">
-        <h2>Description</h2>
-        <p class="long-desc">
-          ${product.description || "OEM compatible replacement part."}
-        </p>
-      </div>
+  <h2>Description</h2>
+
+  <p class="long-desc">
+    ${product.description || "OEM compatible replacement part."}
+  </p>
+
+  ${
+    product.highlights && product.highlights.length
+      ? `
+        <ul class="product-highlights">
+          ${product.highlights
+            .map(point => `<li>${point}</li>`)
+            .join("")}
+        </ul>
+      `
+      : ""
+  }
+</div>
+
 
       <div class="product-section">
         <h2>Compatible Vehicles</h2>
@@ -145,35 +159,9 @@
     mainImage.style.transform = zoomed ? "scale(1.6)" : "scale(1)";
   });
 
-  /* =========================
-     WISHLIST (DATA SAFE)
-     ========================= */
-  const wishlistBtn = document.getElementById("wishlistBtn");
-  let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
-  if (wishlist.some(i => i.id === product.id)) {
-    wishlistBtn.classList.add("active");
-    wishlistBtn.textContent = "♥";
-  }
 
-  wishlistBtn.addEventListener("click", () => {
-    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-    const index = wishlist.findIndex(i => i.id === product.id);
 
-    if (index > -1) {
-      wishlist.splice(index, 1);
-      wishlistBtn.classList.remove("active");
-      wishlistBtn.textContent = "♡";
-      showToast("Removed from wishlist");
-    } else {
-      wishlist.push(product);
-      wishlistBtn.classList.add("active");
-      wishlistBtn.textContent = "♥";
-      showToast("Added to wishlist");
-    }
-
-    localStorage.setItem("wishlist", JSON.stringify(wishlist));
-  });
 
   updateCartCount();
 

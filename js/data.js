@@ -13,8 +13,8 @@ const PRODUCTS = [
     category: "airbags",
 
     /* ===== PRICING ===== */
-    mrp: 449,          // Original price (cut)
-    price: 409,        // Selling price
+    mrp: 429,          // Original price (cut)
+    price: 349,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -70,18 +70,30 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM driver steering wheel airbag removed from a
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
+
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -103,7 +115,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 449,          // Original price (cut)
-    price: 409,        // Selling price
+    price: 369,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -157,18 +169,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM driver steering wheel airbag removed from a
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -187,7 +210,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 449,          // Original price (cut)
-    price: 409,        // Selling price
+    price: 369,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -242,18 +265,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM driver steering wheel airbag removed from a
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -272,7 +306,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 449,          // Original price (cut)
-    price: 409,        // Selling price
+    price: 369,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -327,18 +361,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM driver steering wheel airbag removed from a
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -357,7 +402,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 449,          // Original price (cut)
-    price: 409,        // Selling price
+    price: 349,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -416,18 +461,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM driver steering wheel airbag removed from a
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -446,7 +502,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 499,          // Original price (cut)
-    price: 449,        // Selling price
+    price: 399,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -484,18 +540,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM passenger airbag removed from a
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -573,18 +640,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM roof curtain airbag removed from the driver's side of a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -603,7 +681,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 220,          // Original price (cut)
-    price: 160,        // Selling price
+    price: 144,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -646,18 +724,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM rear blind spot radar sensor removed from a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM Rear Radar Sensor removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This sensor is a direct OEM replacement designed to restore factory safety performance.
+It has no damage or tampering.
 
-      This radar sensor meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this sensor is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -676,7 +765,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 220,          // Original price (cut)
-    price: 150,        // Selling price
+    price: 129,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -719,18 +808,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM left hand side blind spot radar sensor removed from a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM Radar Sensor removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This sensor is a direct OEM replacement designed to restore factory safety performance.
+It has no damage or tampering.
 
-      This radar sensor meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this sensor is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -740,7 +840,7 @@ const PRODUCTS = [
     }
   },
 
-  { id: "honda_accord_engine mounths_2018_2022",
+  { id: "honda_accord_engine mounts_2018_2022",
 
     /* ===== BASIC INFO ===== */
     name: "2018-2022 Honda Accord Fwd 1.5L Right Side Engine Motor Mount W/ Bracket Oem New 100% ORIGINAL FROM HONDA OEM",
@@ -749,7 +849,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 249,          // Original price (cut)
-    price: 199,        // Selling price
+    price: 179,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -810,17 +910,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a BRAND NEW Right Hand Side Engine/motor mount with bracket. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM Engine Mount removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ direct from Factory
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This engine mount is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This engine/motor mount meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this engine mount is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -839,7 +951,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 229,          // Original price (cut)
-    price: 199,        // Selling price
+    price: 169,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -868,18 +980,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM Panel/Front Passenger Dashboard airbag removed from a
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -897,8 +1020,8 @@ const PRODUCTS = [
     category: "roof curtain airbags",
 
     /* ===== PRICING ===== */
-    mrp: 549,          // Original price (cut)
-    price: 299,        // Selling price
+    mrp: 449,          // Original price (cut)
+    price: 269,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -957,18 +1080,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM roof curtain airbag removed from the passenger's side of a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -987,7 +1121,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 233,          // Original price (cut)
-    price: 199,        // Selling price
+    price: 169,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -1035,18 +1169,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM passenger knee airbag removed from the passenger's side of a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver knee airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -1064,7 +1209,7 @@ const PRODUCTS = [
     category: "driver airbags",
 
     /* ===== PRICING ===== */
-    mrp: 350,          // Original price (cut)
+    mrp: 550,          // Original price (cut)
     price: 275,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
@@ -1108,18 +1253,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM airbag removed from a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -1137,8 +1293,8 @@ const PRODUCTS = [
     category: "driver airbags",
 
     /* ===== PRICING ===== */
-    mrp: 259,          // Original price (cut)
-    price: 199,        // Selling price
+    mrp: 369,          // Original price (cut)
+    price: 169,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -1206,18 +1362,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM airbag removed from a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -1236,7 +1403,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 599,          // Original price (cut)
-    price: 499,        // Selling price
+    price: 449,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -1305,18 +1472,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM airbag removed from a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -1335,7 +1513,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 549,          // Original price (cut)
-    price: 499,        // Selling price
+    price: 399,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -1441,18 +1619,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM airbag removed from a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -1470,7 +1659,7 @@ const PRODUCTS = [
     category: "driver airbags",
 
     /* ===== PRICING ===== */
-    mrp: 359,          // Original price (cut)
+    mrp: 459,          // Original price (cut)
     price: 279,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
@@ -1529,18 +1718,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM airbag removed from a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -1559,7 +1759,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 549,          // Original price (cut)
-    price: 409,        // Selling price
+    price: 369,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -1611,18 +1811,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM airbag removed from a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -1641,7 +1852,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 699,          // Original price (cut)
-    price: 649,        // Selling price
+    price: 589,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -1710,18 +1921,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM airbag removed from a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -1740,7 +1962,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 499,          // Original price (cut)
-    price: 419,        // Selling price
+    price: 379,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -1805,19 +2027,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM airbag removed from a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
 
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
       title: "2016 2017 2018 2019 2020 2021 Driver Steering Wheel Airbag Honda HR-V | AutoFits USA",
@@ -1835,7 +2067,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 369,          // Original price (cut)
-    price: 299,        // Selling price
+    price: 189,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -1887,18 +2119,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM airbag removed from a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -1917,7 +2160,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 569,          // Original price (cut)
-    price: 499,        // Selling price
+    price: 429,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -1964,18 +2207,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM airbag removed from a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -1994,7 +2248,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 519,          // Original price (cut)
-    price: 430,        // Selling price
+    price: 370,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -2059,18 +2313,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM airbag removed from a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -2089,7 +2354,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 299,          // Original price (cut)
-    price: 249,        // Selling price
+    price: 229,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -2154,18 +2419,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM airbag removed from a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -2184,7 +2460,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 499,          // Original price (cut)
-    price: 415,        // Selling price
+    price: 379,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -2249,18 +2525,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM airbag removed from a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -2279,7 +2566,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 549,          // Original price (cut)
-    price: 499,        // Selling price
+    price: 419,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -2329,18 +2616,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM airbag removed from a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -2359,7 +2657,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 549,          // Original price (cut)
-    price: 459,        // Selling price
+    price: 389,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -2404,18 +2702,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM airbag removed from a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -2434,7 +2743,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 349,          // Original price (cut)
-    price: 229,        // Selling price
+    price: 209,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -2491,18 +2800,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM airbag removed from a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM driver steering wheel airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {
@@ -2521,7 +2841,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 349,          // Original price (cut)
-    price: 229,        // Selling price
+    price: 209,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
@@ -2608,18 +2928,29 @@ const PRODUCTS = [
     ],
 
     /* ===== LONG DESCRIPTION ===== */
-    description: `
-      This is a genuine OEM airbag removed from a 
-      low-mileage donor vehicle. The unit has been professionally inspected
-      and is fully functional.
+   description: `
+This is a genuine OEM airbag removed from a low-mileage donor vehicle.
+The unit has been professionally inspected and is fully functional.
 
-      ✔ Direct OEM replacement  
-      ✔ Guaranteed fit for listed vehicles  
-      ✔ No deployment, no damage  
-      ✔ VIN verification recommended before purchase  
+This airbag is a direct OEM replacement designed to restore factory safety performance.
+It has never been deployed and shows no damage or tampering.
 
-      This airbag meets all OEM safety standards and is ready for installation.
-    `,
+We certify that this airbag is not subject to any active manufacturer recall and will be shipped
+in full compliance with hazmat shipping requirements.
+
+VIN verification is strongly recommended prior to purchase to ensure compatibility.
+`,
+
+highlights: [
+  "Direct OEM replacement",
+  "Guaranteed fit for listed vehicles",
+  "No deployment, no damage",
+  "Professionally inspected and tested",
+  "VIN verification recommended before purchase",
+  "Meets all OEM safety standards",
+  "Not subject to any active manufacturer recall",
+  "Hazmat-compliant shipping"
+],
 
     /* ===== SEO (OPTIONAL BUT RECOMMENDED) ===== */
     seo: {

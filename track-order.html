@@ -32,35 +32,14 @@
     Enter your Order ID and email to view real-time tracking updates.
   </p>
 
-  <div class="track-form">
-    <input type="text" id="orderId" placeholder="Order ID (e.g. AFU123456)" />
-    <input type="email" id="email" placeholder="Email used during checkout" />
-    <button onclick="trackOrder()">Track Order</button>
-  </div>
+<form id="trackForm">
+  <input type="text" id="orderId" placeholder="Order ID" required />
+  <input type="email" id="email" placeholder="Email Address" required />
+  <button type="submit">Track Order</button>
+</form>
 
-  <div id="trackingResult" class="tracking-result hidden">
+<div id="orderResult"></div>
 
-    <h2>Order Status</h2>
-
-    <div class="status-line">
-      <div class="step active">Order Confirmed</div>
-      <div class="step active">Processing</div>
-      <div class="step">Shipped</div>
-      <div class="step">Out for Delivery</div>
-      <div class="step">Delivered</div>
-    </div>
-
-    <div class="tracking-details">
-      <p><strong>Carrier:</strong> USPS</p>
-      <p><strong>Tracking Number:</strong> <span id="trackingNumber">—</span></p>
-      <p><strong>Estimated Delivery:</strong> <span id="deliveryDate">—</span></p>
-    </div>
-
-    <div class="note">
-      Live carrier tracking will be enabled once your order is shipped.
-    </div>
-
-  </div>
 
 </main>
 

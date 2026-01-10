@@ -142,14 +142,7 @@ body {
   cursor: pointer;
 }
 
-.wishlist-btn {
-  padding: 14px;
-  background: #e5e7eb;
-  border: none;
-  border-radius: 10px;
-  font-size: 18px;
-  cursor: pointer;
-}
+
 
 /* TABS */
 .tabs {
@@ -272,19 +265,6 @@ body {
 
 .add-btn:hover {
   background: #1e40af;
-}
-
-.wishlist-btn {
-  width: 48px;
-  background: white;
-  border: 1px solid #d1d5db;
-  border-radius: 10px;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.wishlist-btn:hover {
-  background: #f3f4f6;
 }
 
 
