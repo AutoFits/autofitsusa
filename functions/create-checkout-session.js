@@ -11,7 +11,7 @@ exports.handler = async (event) => {
       };
     }
 
-    const { totalAmount } = JSON.parse(event.body);
+    const { totalAmount, cartItems } = JSON.parse(event.body);
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
