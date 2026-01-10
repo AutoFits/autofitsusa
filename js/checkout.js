@@ -12,8 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
 /* =========================
    PLACE ORDER
 ========================= */
-async function placeOrder(e) {
-  e.preventDefault();
+async function placeOrder() {
+
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  if (!cart.length) {
+    alert("Your cart is empty.");
+    return;
+  }
 
   const firstName = document.getElementById("firstName")?.value.trim();
   const lastName  = document.getElementById("lastName")?.value.trim();
@@ -24,12 +30,6 @@ async function placeOrder(e) {
 
   if (!firstName || !lastName || !address) {
     alert("Please fill in all required fields.");
-    return;
-  }
-
-  const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-  if (!cart.length) {
-    alert("Your cart is empty.");
     return;
   }
 
@@ -50,6 +50,7 @@ async function placeOrder(e) {
         body: JSON.stringify({
           orderId,
           totalAmount: total,
+          cartItems: cart,
           customer_name: name,
           customer_email: email,
           customer_address: address
@@ -71,6 +72,7 @@ async function placeOrder(e) {
     alert("Something went wrong. Please try again.");
   }
 }
+
 
 
 /* =========================
