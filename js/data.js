@@ -2067,7 +2067,7 @@ highlights: [
 
     /* ===== PRICING ===== */
     mrp: 369,          // Original price (cut)
-    price: 189,        // Selling price
+    price: 269,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
