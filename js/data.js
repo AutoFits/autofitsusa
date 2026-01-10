@@ -14,7 +14,7 @@ const PRODUCTS = [
 
     /* ===== PRICING ===== */
     mrp: 429,          // Original price (cut)
-    price: 349,        // Selling price
+    price: 369,        // Selling price
 
     /* ===== IMAGES (MULTIPLE) ===== */
     images: [
