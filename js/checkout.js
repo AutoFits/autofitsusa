@@ -55,14 +55,16 @@ if (Number.isNaN(total) || total <= 0) {
 body: JSON.stringify({
   orderId,
   totalAmount: total,
+  items: cart.map(item => ({
+    name: item.name || item.id,
+    qty: item.qty || 1
+  })),
   customer_name: name,
   customer_email: email,
-  customer_address: address,
-  items: cart.map(i => ({
-    id: i.id,
-    qty: i.qty
-  }))
+  customer_address: address
 })
+
+
 
       }
     );
