@@ -6,12 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!totalEl) return;
 
   const rawTotal = localStorage.getItem("cartTotal");
-  const cleanTotal = rawTotal
+  const total = rawTotal
     ? Number(rawTotal.replace(/[^0-9.]/g, ""))
     : 0;
 
-  totalEl.textContent =
-    cleanTotal > 0 ? `$${cleanTotal.toFixed(2)}` : "$0.00";
+  totalEl.textContent = total > 0 ? `$${total.toFixed(2)}` : "$0.00";
 });
 
 /* =========================
@@ -21,39 +20,40 @@ async function placeOrder() {
   const rawCart = localStorage.getItem("cart");
   const cart = rawCart ? JSON.parse(rawCart) : [];
 
+  console.log("RAW CART 👉", cart);
+
   if (!Array.isArray(cart) || cart.length === 0) {
     alert("Your cart is empty.");
     return;
   }
 
-  const firstName = document.getElementById("firstName")?.value.trim();
-  const lastName  = document.getElementById("lastName")?.value.trim();
-  const email     = document.getElementById("email")?.value.trim();
-  const address   = document.getElementById("address")?.value.trim();
+  // 🔥 SAFE NORMALIZATION
+  const cartItems = [];
 
-  if (!firstName || !lastName || !email || !address) {
-    alert("Please fill in all required fields.");
-    return;
-  }
+  for (const item of cart) {
+    const rawPrice =
+      item.price ??
+      item.selling ??
+      item.amount ??
+      item.cost ??
+      item.value;
 
-  // ✅ SANITIZE CART ITEMS (THIS IS THE FIX)
-  const cartItems = cart.map(item => {
-    const rawPrice = item.price ?? item.sellingPrice ?? item.amount ?? "";
-
-    const price = Number(
-      String(rawPrice).replace(/[^0-9.]/g, "")
-    );
+    const price = Number(String(rawPrice).replace(/[^0-9.]/g, ""));
 
     if (!price || isNaN(price)) {
-      throw new Error(`Invalid price for item: ${item.name}`);
+      console.error("❌ BAD ITEM:", item);
+      alert("One item in your cart has an invalid price. Please re-add it.");
+      return;
     }
 
-    return {
-      name: item.name || item.title || "AutoFits USA Product",
-      price: price,
-      qty: Number(item.qty || 1)
-    };
-  });
+    cartItems.push({
+      name: item.name || item.title || item.productName || "AutoFits USA Product",
+      price,
+      qty: Number(item.qty || item.quantity || item.count || 1)
+    });
+  }
+
+  console.log("SANITIZED ITEMS 👉", cartItems);
 
   try {
     const response = await fetch(
@@ -73,17 +73,17 @@ async function placeOrder() {
       console.error(data);
       alert("Payment initialization failed.");
     }
-
   } catch (err) {
     console.error(err);
-    alert(err.message || "Checkout failed.");
+    alert("Checkout failed. Please try again.");
   }
 }
 
 /* =========================
-   BUTTON BINDING
+   BUTTON
 ========================= */
 document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("placeOrderBtn");
-  if (btn) btn.addEventListener("click", placeOrder);
+  document
+    .getElementById("placeOrderBtn")
+    ?.addEventListener("click", placeOrder);
 });
