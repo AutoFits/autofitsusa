@@ -5,15 +5,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const totalEl = document.getElementById("total");
   if (!totalEl) return;
 
-  const storedTotal = localStorage.getItem("cartTotal");
-  totalEl.textContent = storedTotal ? `$${storedTotal}` : "$0.00";
+  const rawTotal = localStorage.getItem("cartTotal");
+  const cleanTotal = rawTotal
+    ? Number(rawTotal.replace(/[^0-9.]/g, ""))
+    : 0;
+
+  totalEl.textContent =
+    cleanTotal > 0 ? `$${cleanTotal.toFixed(2)}` : "$0.00";
 });
 
 /* =========================
    PLACE ORDER
 ========================= */
 async function placeOrder() {
-  // 1️⃣ Read cart safely
   const rawCart = localStorage.getItem("cart");
   const cart = rawCart ? JSON.parse(rawCart) : [];
 
@@ -22,7 +26,6 @@ async function placeOrder() {
     return;
   }
 
-  // 2️⃣ Read form fields
   const firstName = document.getElementById("firstName")?.value.trim();
   const lastName  = document.getElementById("lastName")?.value.trim();
   const email     = document.getElementById("email")?.value.trim();
@@ -33,46 +36,47 @@ async function placeOrder() {
     return;
   }
 
-  // 3️⃣ Normalize cart items (🔥 THIS IS THE FIX 🔥)
-  const cartItems = cart.map(item => ({
-    name: item.name || item.title || "AutoFits USA Product",
-    price: Number(item.price ?? item.selling ?? 0),
-    qty: Number(item.qty ?? item.quantity ?? 1)
-  }));
+  // ✅ SANITIZE CART ITEMS (THIS IS THE FIX)
+  const cartItems = cart.map(item => {
+    const rawPrice = item.price ?? item.sellingPrice ?? item.amount ?? "";
 
-  // 4️⃣ Validate prices (Stripe is strict)
-  for (const item of cartItems) {
-    if (!item.price || isNaN(item.price) || item.price <= 0) {
-      alert(`Invalid price for item: ${item.name}`);
-      return;
+    const price = Number(
+      String(rawPrice).replace(/[^0-9.]/g, "")
+    );
+
+    if (!price || isNaN(price)) {
+      throw new Error(`Invalid price for item: ${item.name}`);
     }
-  }
 
-  // 5️⃣ Call Netlify function
+    return {
+      name: item.name || item.title || "AutoFits USA Product",
+      price: price,
+      qty: Number(item.qty || 1)
+    };
+  });
+
   try {
     const response = await fetch(
       "/.netlify/functions/create-checkout-session",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          items: cartItems
-        })
+        body: JSON.stringify({ items: cartItems })
       }
     );
 
     const data = await response.json();
 
     if (data.url) {
-      window.location.href = data.url; // ✅ Redirect to Stripe
+      window.location.href = data.url;
     } else {
-      console.error("Stripe error:", data);
+      console.error(data);
       alert("Payment initialization failed.");
     }
 
   } catch (err) {
-    console.error("Checkout error:", err);
-    alert("Something went wrong. Please try again.");
+    console.error(err);
+    alert(err.message || "Checkout failed.");
   }
 }
 
@@ -83,4 +87,3 @@ document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("placeOrderBtn");
   if (btn) btn.addEventListener("click", placeOrder);
 });
-
