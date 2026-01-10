@@ -33,11 +33,16 @@ async function placeOrder() {
     return;
   }
 
-  const total = parseFloat(localStorage.getItem("cartTotal") || "0");
-  if (total <= 0) {
-    alert("Invalid order total.");
-    return;
-  }
+const rawTotal = localStorage.getItem("cartTotal");
+
+const total = rawTotal
+  ? Number(rawTotal.replace(/[^0-9.]/g, ""))
+  : 0;
+
+if (Number.isNaN(total) || total <= 0) {
+  alert("Invalid order total. Please refresh the cart.");
+  return;
+}
 
   const orderId = "AFU-" + Date.now();
 
