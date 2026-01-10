@@ -3,40 +3,57 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 exports.handler = async (event) => {
   try {
-    const { totalAmount, items, customer } = JSON.parse(event.body);
+    const body = JSON.parse(event.body);
+    const items = Array.isArray(body.items) ? body.items : [];
 
-    if (!Array.isArray(items) || items.length === 0) {
+    if (!items.length) {
       return {
         statusCode: 400,
-        body: JSON.stringify({ error: "No items in cart" })
+        body: JSON.stringify({ error: "Cart is empty" })
       };
     }
 
-    const session = await stripe.checkout.sessions.create({
-      payment_method_types: ["card"],
-      mode: "payment",
+    // 🔒 NORMALIZE ITEMS (THIS FIXES NaN FOREVER)
+    const lineItems = items.map((item, index) => {
+      const name =
+        item.name || item.title || `Item ${index + 1}`;
 
-      line_items: items.map(item => ({
+      const price = Number(
+        String(item.price).replace(/[^0-9.]/g, "")
+      );
+
+      const qty = Number(item.qty || item.quantity || 1);
+
+      if (!Number.isFinite(price) || price <= 0) {
+        throw new Error(`Invalid price for item: ${name}`);
+      }
+
+      if (!Number.isInteger(qty) || qty <= 0) {
+        throw new Error(`Invalid quantity for item: ${name}`);
+      }
+
+      return {
         price_data: {
           currency: "usd",
-          product_data: {
-            name: item.name
-          },
-          unit_amount: Math.round(item.price * 100)
+          product_data: { name },
+          unit_amount: Math.round(price * 100)
         },
-        quantity: item.qty
-      })),
+        quantity: qty
+      };
+    });
+
+    const session = await stripe.checkout.sessions.create({
+      mode: "payment",
+      payment_method_types: ["card"],
+      line_items: lineItems,
 
       metadata: {
         items: JSON.stringify(
           items.map(i => ({
-            name: i.name,
-            qty: i.qty
+            name: i.name || i.title || "Unknown Item",
+            qty: i.qty || i.quantity || 1
           }))
-        ),
-        customer_name: customer.name,
-        customer_email: customer.email,
-        customer_address: customer.address
+        )
       },
 
       success_url: `${process.env.SITE_URL}/success.html?session_id={CHECKOUT_SESSION_ID}`,
@@ -47,11 +64,14 @@ exports.handler = async (event) => {
       statusCode: 200,
       body: JSON.stringify({ url: session.url })
     };
+
   } catch (err) {
-    console.error("Stripe error:", err);
+    console.error("CHECKOUT ERROR:", err.message);
+
     return {
       statusCode: 500,
       body: JSON.stringify({ error: err.message })
     };
   }
 };
+
