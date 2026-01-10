@@ -116,3 +116,74 @@ Please process this order.
   return { statusCode: 200, body: "Email sent" };
 };
 
+// ===============================
+// CUSTOMER INVOICE EMAIL
+// ===============================
+
+const customerEmail = session.customer_details?.email;
+
+if (customerEmail) {
+  const custName = session.customer_details?.name || "Customer";
+  const addr = session.customer_details?.address || {};
+
+  const customerAddress = `
+${addr.line1 || ""}
+${addr.line2 || ""}
+${addr.city || ""}, ${addr.state || ""} ${addr.postal_code || ""}
+${addr.country || ""}
+  `.trim();
+
+  const customerItems = session.metadata?.items
+    ? JSON.parse(session.metadata.items)
+        .map(i => `• ${i.name} × ${i.qty}`)
+        .join("\n")
+    : "Item details unavailable";
+
+  const paidAmount = (session.amount_total / 100).toFixed(2);
+
+  await transporter.sendMail({
+    from: `"AutoFits USA" <${process.env.ORDER_EMAIL}>`,
+    to: customerEmail,
+    subject: "🧾 Your AutoFits USA Order Confirmation",
+    text: `
+Thank you for your order with AutoFits USA!
+
+Your order has been successfully placed and payment is confirmed.
+
+━━━━━━━━━━━━━━━━━━━━━━
+ORDER DETAILS
+━━━━━━━━━━━━━━━━━━━━━━
+
+Order ID:
+${session.id}
+
+Customer:
+${custName}
+${customerEmail}
+
+Shipping Address:
+${customerAddress}
+
+Items Ordered:
+${customerItems}
+
+Total Paid: USD $${paidAmount}
+
+Payment Status: PAID
+Payment Method: Card (Stripe)
+
+━━━━━━━━━━━━━━━━━━━━━━
+NEED HELP?
+━━━━━━━━━━━━━━━━━━━━━━
+📧 Email: support@autofitsusa.com
+📞 Phone: (Contact number coming soon)
+
+We appreciate your business!
+Your order will be processed shortly.
+
+— AutoFits USA
+    `
+  });
+}
+
+
