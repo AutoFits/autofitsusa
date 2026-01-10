@@ -3,8 +3,21 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 exports.handler = async (event) => {
   try {
+    
     const body = JSON.parse(event.body);
-    const items = Array.isArray(body.items) ? body.items : [];
+
+// 🔥 FIX: read cartItems instead of items
+const items = Array.isArray(body.cartItems) ? body.cartItems : [];
+
+if (!items.length) {
+  return {
+    statusCode: 400,
+    body: JSON.stringify({ error: "Cart is empty" })
+  };
+}
+
+   
+
 
     if (!items.length) {
       return {

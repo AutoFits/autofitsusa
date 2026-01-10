@@ -23,14 +23,10 @@ async function placeOrder() {
     return;
   }
 
-  // 🔥 HYDRATE CART USING PRODUCTS
+  // 🔥 BUILD FULL ITEMS FROM PRODUCTS
   const cartItems = rawCart.map(item => {
     const product = PRODUCTS.find(p => p.id === item.id);
-
-    if (!product || typeof product.price !== "number") {
-      console.error("❌ INVALID PRODUCT:", item);
-      return null;
-    }
+    if (!product) return null;
 
     return {
       name: product.name,
@@ -40,29 +36,22 @@ async function placeOrder() {
   }).filter(Boolean);
 
   if (!cartItems.length) {
-    alert("One item in your cart has an invalid price. Please re-add it.");
+    alert("Cart contains invalid items. Please re-add.");
     return;
   }
 
-  // 🔥 CUSTOMER INFO
-  const firstName = document.getElementById("firstName")?.value.trim();
-  const lastName  = document.getElementById("lastName")?.value.trim();
-  const email     = document.getElementById("email")?.value.trim();
-  const address   = document.getElementById("address")?.value.trim();
-
-  if (!firstName || !lastName || !address) {
-    alert("Please fill all required fields.");
-    return;
-  }
-
-  const orderId = "AFU-" + Date.now();
+  // 🔥 REQUIRED BY BACKEND
+  const totalAmount = cartItems.reduce(
+    (sum, i) => sum + i.price * i.qty,
+    0
+  );
 
   try {
     const res = await fetch("/.netlify/functions/create-checkout-session", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        orderId,
+        totalAmount,
         cartItems
       })
     });
@@ -75,12 +64,12 @@ async function placeOrder() {
       console.error(data);
       alert("Payment initialization failed.");
     }
-
   } catch (err) {
-    console.error("Checkout error:", err);
-    alert("Something went wrong. Please try again.");
+    console.error(err);
+    alert("Checkout error");
   }
 }
+
 
 /* =========================
    BUTTON BINDING
