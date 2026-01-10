@@ -476,3 +476,154 @@
     margin-top: 0px;
   }
 }
+.trust-slider {
+  margin: 24px auto 20px;
+  padding: 14px 0;
+  background: linear-gradient(
+    135deg,
+    #0f0f12,
+    #1a1a22
+  );
+  border-radius: 10px;
+  max-width: 1100px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.trust-track {
+  display: flex;
+  width: max-content;
+  animation: slideLeft 22s linear infinite;
+}
+
+.trust-track span {
+  padding: 0 48px;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #f5f5f5;
+  white-space: nowrap;
+}
+
+/* Smooth premium animation */
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.stats-slider {
+  max-width: 1100px;
+  margin: 30px auto 20px;
+  padding: 26px 0;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.stats-track {
+  display: flex;
+  width: max-content;
+  animation: statsSlide 26s linear infinite;
+}
+
+.stat {
+  min-width: 260px;
+  text-align: center;
+  padding: 0 40px;
+}
+
+.stat h2 {
+  font-size: 42px;
+  font-weight: 800;
+  margin: 0;
+  color: #111;
+}
+
+.stat p {
+  margin-top: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Smooth, calm motion */
+@keyframes statsSlide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.stats-slider {
+  max-width: 1100px;
+  margin: 26px auto 16px;
+  padding: 28px 0;
+
+  /* JOYFUL LIGHT BACKGROUND */
+  background: linear-gradient(
+    135deg,
+    #f8fafc,
+    #eef4ff
+  );
+
+  border-radius: 16px;
+  box-shadow: 0 14px 36px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.stats-track {
+  display: flex;
+  width: max-content;
+
+  /* FASTER & SMOOTHER */
+  animation: statsSlide 18s linear infinite;
+}
+
+.stat {
+  min-width: 260px;
+  text-align: center;
+  padding: 0 42px;
+}
+
+.stat h2 {
+  font-size: 42px;
+  font-weight: 800;
+  margin: 0;
+  color: #0f172a; /* rich dark blue-black */
+}
+
+.stat p {
+  margin-top: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #475569;
+}
+
+/* Seamless loop */
+@keyframes statsSlide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 768px) {
+  .stat {
+    min-width: 220px;
+    padding: 0 28px;
+  }
+
+  .stat h2 {
+    font-size: 34px;
+  }
+
+  .stat p {
+    font-size: 14px;
+  }
+}
