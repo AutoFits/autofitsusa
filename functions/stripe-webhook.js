@@ -1,5 +1,7 @@
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+const Stripe = require("stripe");
 const nodemailer = require("nodemailer");
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 exports.handler = async (event) => {
   const sig = event.headers["stripe-signature"];
@@ -12,70 +14,105 @@ exports.handler = async (event) => {
       process.env.STRIPE_WEBHOOK_SECRET
     );
   } catch (err) {
-    return { statusCode: 400, body: err.message };
+    console.error("Webhook signature failed:", err.message);
+    return { statusCode: 400, body: "Webhook Error" };
   }
 
-  if (stripeEvent.type === "checkout.session.completed") {
-    const session = stripeEvent.data.object;
+  if (stripeEvent.type !== "checkout.session.completed") {
+    return { statusCode: 200, body: "Ignored event" };
+  }
 
-    const name = session.customer_details?.name || "Not provided";
-    const email = session.customer_details?.email || "Not provided";
-    const addr = session.customer_details?.address || {};
+  const session = stripeEvent.data.object;
 
-    // ✅ Proper formatted full address
-    const fullAddress = [
-      addr.line1,
-      addr.line2,
-      `${addr.city || ""}, ${addr.state || ""} ${addr.postal_code || ""}`,
-      addr.country
-    ]
-      .filter(Boolean)
-      .join("\n");
+  /* =========================
+     CUSTOMER INFO
+  ========================= */
+  const customerName = session.customer_details?.name || "N/A";
+  const customerEmail = session.customer_details?.email || "N/A";
 
-    // ✅ Fetch cart items from metadata (from create-checkout-session.js)
-    const cartItems = session.metadata?.cart
-      ? JSON.parse(session.metadata.cart)
-      : [];
+  const address = session.customer_details?.address || {};
+  const city = address.city || "";
+  const state = address.state || "";
+  const postal = address.postal_code || "";
+  const country = address.country || "";
 
-    const itemsText = cartItems.length
-      ? cartItems.map(i => `${i.name || "Unknown item"} (Qty: ${i.qty || 1})`).join("\n")
-      : "Items not available";
+  const fullAddress = [
+    city && state ? `${city}, ${state}` : city || state,
+    postal,
+    country
+  ].filter(Boolean).join("\n");
 
-    const amount = (session.amount_total / 100).toFixed(2);
+  /* =========================
+     ITEMS (FROM METADATA)
+  ========================= */
+  let itemsText = "Items not available";
 
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.ORDER_EMAIL,
-        pass: process.env.ORDER_EMAIL_PASS,
-      },
-    });
+  if (session.metadata?.items) {
+    try {
+      const items = JSON.parse(session.metadata.items);
+      itemsText = items
+        .map(i => `• ${i.name}  ×  ${i.qty}`)
+        .join("\n");
+    } catch (e) {
+      console.error("Item parse error:", e.message);
+    }
+  }
 
-    await transporter.sendMail({
-      from: `"AutoFits USA Orders" <${process.env.ORDER_EMAIL}>`,
-      to: process.env.ORDER_EMAIL,
-      subject: `🧾 New Order – ${session.id}`,
-      text: `
-New Order Received
+  /* =========================
+     PAYMENT INFO
+  ========================= */
+  const amountPaid = (session.amount_total / 100).toFixed(2);
+  const currency = session.currency?.toUpperCase() || "USD";
+  const orderId = session.id;
 
-Order ID: ${session.id}
+  /* =========================
+     EMAIL SETUP
+  ========================= */
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.ORDER_EMAIL,
+      pass: process.env.ORDER_EMAIL_PASS
+    }
+  });
+
+  const emailBody = `
+AUTOFiTS USA — ORDER INVOICE
+──────────────────────────────
+
+Order ID:
+${orderId}
 
 Customer:
-${name}
-${email}
+${customerName}
+${customerEmail}
 
 Shipping Address:
-${fullAddress}
+${fullAddress || "Address not provided"}
 
-Items:
+──────────────────────────────
+Items Ordered:
 ${itemsText}
 
-Amount Paid: $${amount}
+──────────────────────────────
+Total Paid: ${currency} $${amountPaid}
 
+Payment Status: PAID
+Payment Method: Card (Stripe)
+
+──────────────────────────────
 Please process this order.
-      `,
-    });
-  }
 
-  return { statusCode: 200, body: "ok" };
+— AutoFits USA
+`;
+
+  await transporter.sendMail({
+    from: `"AutoFits USA Orders" <${process.env.ORDER_EMAIL}>`,
+    to: process.env.ORDER_EMAIL,
+    subject: `🧾 New Order Invoice — ${orderId}`,
+    text: emailBody
+  });
+
+  return { statusCode: 200, body: "Email sent" };
 };
+
