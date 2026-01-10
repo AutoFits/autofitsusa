@@ -1,3 +1,7 @@
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("show");
+}
+
 function openWhatsApp() {
   window.open("https://wa.me/1XXXXXXXXXX", "_blank");
 }
