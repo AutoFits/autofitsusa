@@ -52,18 +52,24 @@ if (Number.isNaN(total) || total <= 0) {
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          orderId,
-          totalAmount: total,
-          cartItems: cart,
-          customer_name: name,
-          customer_email: email,
-          customer_address: address
-        })
+body: JSON.stringify({
+  orderId,
+  totalAmount: total,
+  customer_name: name,
+  customer_email: email,
+  customer_address: address,
+  items: cart.map(i => ({
+    id: i.id,
+    qty: i.qty
+  }))
+})
+
       }
     );
 
-    const data = await response.json();
+    const text = await response.text();
+    const data = text ? JSON.parse(text) : {};
+
 
     if (data.url) {
       window.location.href = data.url; // 🚀 Stripe redirect
