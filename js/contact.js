@@ -3,7 +3,7 @@ function toggleMenu() {
 }
 
 function openWhatsApp() {
-  window.open("https://wa.me/1XXXXXXXXXX", "_blank");
+  window.open("https://wa.me/17134092908", "_blank");
 }
 
 document.getElementById("contactForm").addEventListener("submit", async (e) => {
